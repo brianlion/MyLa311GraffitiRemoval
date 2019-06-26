@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_ui_policy">
+    <sys_sg_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_328401_mylagraff_removal_request">u_boolean_75=true^EQ<item endquery="false" field="u_boolean_75" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name>Show Chemical Solvent</name>
+        <order/>
+        <reverse_if_false>true</reverse_if_false>
+        <short_description/>
+        <sys_class_name>sys_sg_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-31 22:02:04</sys_created_on>
+        <sys_id>ce824945dbb1330040b45608689619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Show Chemical Solvent</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_sg_ui_policy_ce824945dbb1330040b45608689619f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-31 22:02:04</sys_updated_on>
+        <table>x_328401_mylagraff_removal_request</table>
+    </sys_sg_ui_policy>
+</record_update>

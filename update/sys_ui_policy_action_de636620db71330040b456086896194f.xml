@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>color</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-30 15:48:20</sys_created_on>
+        <sys_id>de636620db71330040b456086896194f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>color</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_ui_policy_action_de636620db71330040b456086896194f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-30 15:48:20</sys_updated_on>
+        <table>x_328401_mylagraff_removal_request</table>
+        <ui_policy display_value="Show paint color text field">a643e220db71330040b456086896193a</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

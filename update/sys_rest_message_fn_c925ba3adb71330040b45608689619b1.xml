@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+    "QueryRequest": {&#13;
+        "srType": [&#13;
+            "Graffiti Removal"&#13;
+        ],&#13;
+        "updatedSince":  "${updatedSince}",&#13;
+        "updatedTill": "${updatedTill}",&#13;
+        "SortBy": "Created Date",&#13;
+        "SortOrder": "DESC",&#13;
+        "NewQuery": "${NewQuery}",&#13;
+        "PageSize": "${PageSize}",&#13;
+        "StartRowNum": "${StartRowNum}"&#13;
+    }&#13;
+}</content>
+        <function_name>Final</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>GetSR [ Final ]</qualified_name>
+        <rest_endpoint>https://api-test.lacity.org/myla311_qa/QuerySRs</rest_endpoint>
+        <rest_message display_value="GetSR">eec8d9c2db21330040b4560868961911</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-06 16:52:58</sys_created_on>
+        <sys_id>c925ba3adb71330040b45608689619b1</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Final</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_rest_message_fn_c925ba3adb71330040b45608689619b1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-06 17:11:51</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description>Updating a single SR record</description>
+        <flush_cache>false</flush_cache>
+        <name>TestUpdateRecord(With Unchecking)</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[// Use gs.info for debugging
+
+try{
+	
+	// Send rest message and get response
+	var r = new sn_ws.RESTMessageV2('x_328401_mylagraff.GetSR', 'Single');
+	var response = r.execute();
+	var responseBody = response.getBody();
+	var httpStatus = response.getStatusCode();
+	var responseObj = JSON.parse(responseBody);
+	
+	// Query record to see if it already exists
+	var gr = new GlideRecord('x_328401_mylagraff_removal_request');
+	gr.addQuery('service_request_number', responseObj.Response.ListOfServiceRequest.ServiceRequest[0].SRNumber);
+	gr.query();
+	// If not found, then create
+	if(!gr.next()){
+		gs.info("RECORD NOT FOUND");
+		
+		// Initialize the gliderecord if not found
+		gr.initialize();
+		
+		//Check if location exists in table and if it does, don't create and just set
+		var lr = new GlideRecord('cmn_location');
+		lr.addQuery('name', responseObj.Response.ListOfServiceRequest.ServiceRequest[0].SRAddress);
+		lr.query();
+		if(!lr.next()){
+			lr.initialize();
+			lr.name = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].SRAddress;
+			lr.latitude = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].Latitude;
+			lr.longitude = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].Longitude;
+			lr.update();
+		}
+		
+		// Mapping fields
+		// Set SR number
+		gr.service_request_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].SRNumber;
+		
+		// Set location field to newly created location record
+		var locationId = lr.getUniqueValue();
+		gr.location = locationId;
+		
+		// Set Priority
+		var responsePriority = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].Priority;
+		
+		if(responsePriority == "Normal"){
+			gr.priority = 1;
+		}
+		else if(responsePriority == "High"){
+			gr.priority = 2;
+		}
+		else if(responsePriority == "Escalated - 1"){
+			gr.priority = 3;
+		}
+		else {
+			gr.priority = 4;
+		}
+		
+		// Set Status
+		var reponseStatus = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].Status;
+		
+		if(reponseStatus == "Open"){
+			gr.state = 1;
+		}
+		else if(reponseStatus == "Closed"){
+			gr.state = 2;
+		}
+		else if(reponseStatus == "Cancelled"){
+			gr.state = 3;
+		}
+		else if(reponseStatus == "Pending"){
+			gr.state = 4;
+		}
+		else {
+			gr.state = 5;
+		}
+		
+		// Set Contact Info
+		gr.first_name = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].NewContactFirstName;
+		gr.last_name = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].NewContactLastName;
+		gr.email = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].NewContactEmail;
+		gr.phone_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].NewContactPhone;
+		gr.extension = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].PhoneNumberExtension;
+		
+		
+		// Mark checkboxes
+		var graffitiArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval.length;
+		
+		for(var i = 0; i < graffitiArrayLength; i++){
+			
+			var graffitiOn =			responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].GraffitiOn;
+			
+			var removalMethod =			responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].RemovalMethod;
+			
+			var firstFloorCase = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].FirstFloorCase;
+			
+			var muralCase = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].MuralCase;
+			
+			var contactType =			responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].ContactType;
+			
+			// Graffiti on checkboxes
+			switch (graffitiOn){
+				case "Alley-Door(s)":
+				gr.u_boolean_31 = true;
+				break;
+				case "Alley-Garage":
+				gr.u_boolean_32 = true;
+				break;
+				case "Alley-Wall(s)":
+				gr.u_boolean_33 = true;
+				break;
+				case "Barricade":
+				gr.u_boolean_34 = true;
+				break;
+				case "Brick Wall":
+				gr.u_boolean_35 = true;
+				break;
+				case "Bridge":
+				gr.u_boolean_36 = true;
+				break;
+				case "Building":
+				gr.u_boolean_37 = true;
+				break;
+				case "Concrete Block Wall":
+				gr.u_boolean_38 = true;
+				break;
+				case "Curb(s)":
+				gr.u_boolean_39 = true;
+				break;
+				case "Door(s)":
+				gr.u_boolean_40 = true;
+				break;
+				case "Driveway":
+				gr.u_boolean_41 = true;
+				break;
+				case "Fence":
+				gr.u_boolean_42 = true;
+				break;
+				case "Fire Hydrant":
+				gr.u_boolean_43 = true;
+				break;
+				case "Garage":
+				gr.u_boolean_44 = true;
+				break;
+				case "Granite Pole(s)":
+				gr.u_boolean_45 = true;
+				break;
+				case "House-Building":
+				gr.u_boolean_46 = true;
+				break;
+				case "Mailbox":
+				gr.u_boolean_47 = true;
+				break;
+				case "Metal Pole(s)":
+				gr.u_boolean_48 = true;
+				break;
+				case "Overpass":
+				gr.u_boolean_49 = true;
+				break;
+				case "Parking Lot":
+				gr.u_boolean_50 = true;
+				break;
+				case "Pedestrian Furniture":
+				gr.u_boolean_51 = true;
+				break;
+				case "Pedestrian Tunnel":
+				gr.u_boolean_52 = true;
+				break;
+				case "Red Curb":
+				gr.u_boolean_53 = true;
+				break;
+				case "Retaining Wall":
+				gr.u_boolean_54 = true;
+				break;
+				case "Roll Down Doors":
+				gr.u_boolean_55 = true;
+				break;
+				case "Sidewalk":
+				gr.u_boolean_56 = true;
+				break;
+				case "Soundwalls":
+				gr.u_boolean_57 = true;
+				break;
+				case "Stairs":
+				gr.u_boolean_58 = true;
+				break;
+				case "Stop Sign(s)":
+				gr.u_boolean_59 = true;
+				break;
+				case "Street Sign(s)":
+				gr.u_boolean_60 = true;
+				break;
+				case "Street(s)":
+				gr.u_boolean_61 = true;
+				break;
+				case "Stucco Wall(s)":
+				gr.u_boolean_62 = true;
+				break;
+				case "Telephone Pole(s)":
+				gr.u_boolean_63 = true;
+				break;
+				case "Traffic Control Box":
+				gr.u_boolean_64 = true;
+				break;
+				case "Traffic Sign(s)":
+				gr.u_boolean_65 = true;
+				break;
+				case "Tree(s)":
+				gr.u_boolean_66 = true;
+				break;
+				case "Underpass":
+				gr.u_boolean_67 = true;
+				break;
+				case "Walkway":
+				gr.u_boolean_68 = true;
+				break;
+				case "Wall(s)":
+				gr.u_boolean_69 = true;
+				break;
+				case "Windows":
+				gr.u_boolean_70 = true;
+				break;
+				case "Other":
+				gr.u_boolean_71 = true;
+				gr.graffiti_on = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].OtherGraffitiSurface;
+				break;
+			}
+			
+			// Removal method checkboxes
+			switch(removalMethod){
+				case "Chemical Solvent":
+				gr.u_boolean_75 = true;
+				break;
+				case "Sandblast / Waterblast":
+				gr.u_boolean_76 = true;
+				break;
+				case "Paint":
+				gr.u_boolean_77 = true;
+				gr.color = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].GraffitiPaintColor;
+				break;
+				case "No Preference":
+				gr.u_boolean_78 = true;
+				break;
+			}
+			
+			// Special cases checkboxes
+			if(firstFloorCase == "Y"){
+				gr.u_boolean_79 = true;
+			}
+			if (muralCase == "Y"){
+				gr.u_boolean_80 = true;
+			}
+			
+			// Contact type field
+			switch(contactType){
+				case "Manager":
+				gr.contact_type = "Manager";
+				break;
+				case "Owner":
+				gr.contact_type = "Owner";
+				break;
+				case "Resident":
+				gr.contact_type = "Resident";
+				break;
+				case "Other":
+				gr.contact_type = "Other";
+				break;
+			}
+			
+			
+		}
+		
+		// Insert record
+		gr.insert();
+	}
+	// ---------------------------Else update record------------------------------
+	else {
+		gs.info("RECORD FOUND");
+		//Check if location exists in table and if it does, don't create and just set
+		var lr = new GlideRecord('cmn_location');
+		lr.addQuery('name', responseObj.Response.ListOfServiceRequest.ServiceRequest[0].SRAddress);
+		lr.query();
+		if(!lr.next()){
+			lr.initialize();
+			lr.name = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].SRAddress;
+			lr.latitude = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].Latitude;
+			lr.longitude = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].Longitude;
+			lr.update();
+		}
+		
+		// Mapping fields
+		// Set SR number
+		gr.service_request_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].SRNumber;
+		
+		// Set location field to newly created location record
+		var locationId = lr.getUniqueValue();
+		gr.location = locationId;
+		
+		// Set Priority
+		var responsePriority = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].Priority;
+		
+		if(responsePriority == "Normal"){
+			gr.priority = 1;
+		}
+		else if(responsePriority == "High"){
+			gr.priority = 2;
+		}
+		else if(responsePriority == "Escalated - 1"){
+			gr.priority = 3;
+		}
+		else {
+			gr.priority = 4;
+		}
+		
+		// Set Status
+		var reponseStatus = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].Status;
+		
+		if(reponseStatus == "Open"){
+			gr.state = 1;
+		}
+		else if(reponseStatus == "Closed"){
+			gr.state = 2;
+		}
+		else if(reponseStatus == "Cancelled"){
+			gr.state = 3;
+		}
+		else if(reponseStatus == "Pending"){
+			gr.state = 4;
+		}
+		else {
+			gr.state = 5;
+		}
+		
+		// Set Contact Info
+		gr.first_name = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].NewContactFirstName;
+		gr.last_name = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].NewContactLastName;
+		gr.email = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].NewContactEmail;
+		gr.phone_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].NewContactPhone;
+		gr.extension = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].PhoneNumberExtension;
+		
+		// Mark checkboxes
+		// Array of all graffitiOn types
+		var graffitiOnTypes = ["Alley-Door(s)", "Alley-Garage", "Alley-Wall(s)", "Barricade", "Brick Wall", "Bridge", "Building", "Concrete Block Wall", "Curb(s)", "Door(s)", "Driveway", "Fence", "Fire Hydrant", "Garage", "Granite Pole(s)", "House-Building", "Mailbox", "Metal Pole(s)", "Overpass", "Parking Lot", "Pedestrian Furniture", "Pedestrian Tunnel", "Red Curb", "Retaining Wall", "Roll Down Doors", "Sidewalk", "Soundwalls", "Stairs", "Stop Sign(s)", "Street Sign(s)", "Street(s)", "Stucco Wall(s)", "Telephone Pole(s)", "Traffic Control Box", "Traffic Sign(s)", "Tree(s)", "Underpass", "Walkway", "Wall(s)", "Windows", "Other"];
+		// Array of returned graffitiOn types
+		var foundGraffitiTypes = [];
+		
+		var graffitiArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval.length;
+		
+		for(var i = 0; i < graffitiArrayLength; i++){
+			
+			var graffitiOn =			responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].GraffitiOn;
+			
+			var removalMethod =			responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].RemovalMethod;
+			
+			var firstFloorCase = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].FirstFloorCase;
+			
+			var muralCase = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].MuralCase;
+			
+			var contactType =			responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].ContactType;
+			
+			
+			// Graffiti on checkboxes
+			switch (graffitiOn){
+				case "Alley-Door(s)":
+				gr.u_boolean_31 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Alley-Garage":
+				gr.u_boolean_32 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Alley-Wall(s)":
+				gr.u_boolean_33 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Barricade":
+				gr.u_boolean_34 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Brick Wall":
+				gr.u_boolean_35 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Bridge":
+				gr.u_boolean_36 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Building":
+				gr.u_boolean_37 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Concrete Block Wall":
+				gr.u_boolean_38 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Curb(s)":
+				gr.u_boolean_39 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Door(s)":
+				gr.u_boolean_40 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Driveway":
+				gr.u_boolean_41 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Fence":
+				gr.u_boolean_42 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Fire Hydrant":
+				gr.u_boolean_43 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Garage":
+				gr.u_boolean_44 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Granite Pole(s)":
+				gr.u_boolean_45 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "House-Building":
+				gr.u_boolean_46 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Mailbox":
+				gr.u_boolean_47 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Metal Pole(s)":
+				gr.u_boolean_48 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Overpass":
+				gr.u_boolean_49 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Parking Lot":
+				gr.u_boolean_50 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Pedestrian Furniture":
+				gr.u_boolean_51 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Pedestrian Tunnel":
+				gr.u_boolean_52 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Red Curb":
+				gr.u_boolean_53 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Retaining Wall":
+				gr.u_boolean_54 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Roll Down Doors":
+				gr.u_boolean_55 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Sidewalk":
+				gr.u_boolean_56 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Soundwalls":
+				gr.u_boolean_57 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Stairs":
+				gr.u_boolean_58 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Stop Sign(s)":
+				gr.u_boolean_59 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Street Sign(s)":
+				gr.u_boolean_60 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Street(s)":
+				gr.u_boolean_61 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Stucco Wall(s)":
+				gr.u_boolean_62 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Telephone Pole(s)":
+				gr.u_boolean_63 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Traffic Control Box":
+				gr.u_boolean_64 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Traffic Sign(s)":
+				gr.u_boolean_65 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Tree(s)":
+				gr.u_boolean_66 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Underpass":
+				gr.u_boolean_67 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Walkway":
+				gr.u_boolean_68 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Wall(s)":
+				gr.u_boolean_69 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Windows":
+				gr.u_boolean_70 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				break;
+				case "Other":
+				gr.u_boolean_71 = true;
+				foundGraffitiTypes.push(graffitiOn);
+				gr.graffiti_on = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].OtherGraffitiSurface;
+				break;
+			}
+			
+			// Removal method checkboxes
+			switch(removalMethod){
+				case "Chemical Solvent":
+				gr.u_boolean_75 = true;
+				break;
+				case "Sandblast / Waterblast":
+				gr.u_boolean_76 = true;
+				break;
+				case "Paint":
+				gr.u_boolean_77 = true;
+				gr.color = responseObj.Response.ListOfServiceRequest.ServiceRequest[0].ListOfLa311GraffitiRemoval.GraffitiRemoval[i].GraffitiPaintColor;
+				break;
+				case "No Preference":
+				gr.u_boolean_78 = true;
+				break;
+			}
+			
+			// Special cases checkboxes
+			if(firstFloorCase == "Y"){
+				gr.u_boolean_79 = true;
+			}
+			if (muralCase == "Y"){
+				gr.u_boolean_80 = true;
+			}
+			
+			// Contact type field
+			switch(contactType){
+				case "Manager":
+				gr.contact_type = "Manager";
+				break;
+				case "Owner":
+				gr.contact_type = "Owner";
+				break;
+				case "Resident":
+				gr.contact_type = "Resident";
+				break;
+				case "Other":
+				gr.contact_type = "Other";
+				break;
+			}
+			
+			
+		}
+		
+		// Unmark false checkboxes
+		gs.info("FOUND GRAFFITI TYPES: " + foundGraffitiTypes);
+		filteredArray = graffitiOnTypes.filter(function(x) {
+			return foundGraffitiTypes.indexOf(x) < 0;
+		});
+		
+		gs.info("FILTERED ARRAY: " + filteredArray);
+		
+		for(var i = 0; i < filteredArray.length; i++){
+			
+			switch (filteredArray[i]){
+				case "Alley-Door(s)":
+				gr.u_boolean_31 = false;
+				break;
+				case "Alley-Garage":
+				gr.u_boolean_32 = false;
+				break;
+				case "Alley-Wall(s)":
+				gr.u_boolean_33 = false;
+				break;
+				case "Barricade":
+				gr.u_boolean_34 = false;
+				break;
+				case "Brick Wall":
+				gr.u_boolean_35 = false;
+				break;
+				case "Bridge":
+				gr.u_boolean_36 = false;
+				break;
+				case "Building":
+				gr.u_boolean_37 = false;
+				break;
+				case "Concrete Block Wall":
+				gr.u_boolean_38 = false;
+				break;
+				case "Curb(s)":
+				gr.u_boolean_39 = false;
+				break;
+				case "Door(s)":
+				gr.u_boolean_40 = false;
+				break;
+				case "Driveway":
+				gr.u_boolean_41 = false;
+				break;
+				case "Fence":
+				gr.u_boolean_42 = false;
+				break;
+				case "Fire Hydrant":
+				gr.u_boolean_43 = false;
+				break;
+				case "Garage":
+				gr.u_boolean_44 = false;
+				break;
+				case "Granite Pole(s)":
+				gr.u_boolean_45 = false;
+				break;
+				case "House-Building":
+				gr.u_boolean_46 = false;
+				break;
+				case "Mailbox":
+				gr.u_boolean_47 = false;
+				break;
+				case "Metal Pole(s)":
+				gr.u_boolean_48 = false;
+				break;
+				case "Overpass":
+				gr.u_boolean_49 = false;
+				break;
+				case "Parking Lot":
+				gr.u_boolean_50 = false;
+				break;
+				case "Pedestrian Furniture":
+				gr.u_boolean_51 = false;
+				break;
+				case "Pedestrian Tunnel":
+				gr.u_boolean_52 = false;
+				break;
+				case "Red Curb":
+				gr.u_boolean_53 = false;
+				break;
+				case "Retaining Wall":
+				gr.u_boolean_54 = false;
+				break;
+				case "Roll Down Doors":
+				gr.u_boolean_55 = false;
+				break;
+				case "Sidewalk":
+				gr.u_boolean_56 = false;
+				break;
+				case "Soundwalls":
+				gr.u_boolean_57 = false;
+				break;
+				case "Stairs":
+				gr.u_boolean_58 = false;
+				break;
+				case "Stop Sign(s)":
+				gr.u_boolean_59 = false;
+				break;
+				case "Street Sign(s)":
+				gr.u_boolean_60 = false;
+				break;
+				case "Street(s)":
+				gr.u_boolean_61 = false;
+				break;
+				case "Stucco Wall(s)":
+				gr.u_boolean_62 = false;
+				break;
+				case "Telephone Pole(s)":
+				gr.u_boolean_63 = false;
+				break;
+				case "Traffic Control Box":
+				gr.u_boolean_64 = false;
+				break;
+				case "Traffic Sign(s)":
+				gr.u_boolean_65 = false;
+				break;
+				case "Tree(s)":
+				gr.u_boolean_66 = false;
+				break;
+				case "Underpass":
+				gr.u_boolean_67 = false;
+				break;
+				case "Walkway":
+				gr.u_boolean_68 = false;
+				break;
+				case "Wall(s)":
+				gr.u_boolean_69 = false;
+				break;
+				case "Windows":
+				gr.u_boolean_70 = false;
+				break;
+				case "Other":
+				gr.u_boolean_71 = false;
+				break;
+			}
+			
+		}
+		
+		
+		// Update record
+		gr.update();
+	}
+	
+	
+}
+
+catch(ex){
+	var message = ex.getMessage();
+}
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-04 17:38:44</sys_created_on>
+        <sys_id>6e7c209adb71330040b45608689619bb</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>TestUpdateRecord(With Unchecking)</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_script_fix_6e7c209adb71330040b45608689619bb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-05 21:55:46</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

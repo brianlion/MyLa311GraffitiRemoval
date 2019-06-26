@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description>Calls the upsert rest message</description>
+        <flush_cache>true</flush_cache>
+        <name>Upsert</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[var r = new sn_ws.RESTMessageV2('x_328401_mylagraff.UpsertSR', 'PostSR');
+// r.setStringParameterNoEscape('Comment', Comment);
+// r.setStringParameterNoEscape('CommentType', CommentType);
+// r.setStringParameterNoEscape('IntegrationId', IntegrationId);
+// r.setStringParameterNoEscape('ReasonCode', ReasonCode);
+// r.setStringParameterNoEscape('ResolutionCode', ResolutionCode);
+// r.setStringParameterNoEscape('SRNumber', SRNumber);
+// r.setStringParameterNoEscape('UpdatedByUserLogin', UpdatedByUserLogin);
+r.setStringParameterNoEscape('Comment', "SECOND COMMENT TEST");
+r.setStringParameterNoEscape('CommentType', "Internal");
+r.setStringParameterNoEscape('IntegrationId', "0603201910514415877221");
+r.setStringParameterNoEscape('ReasonCode', "09");
+r.setStringParameterNoEscape('ResolutionCode', "LIP");
+r.setStringParameterNoEscape('SRNumber', "1-1320987331");
+r.setStringParameterNoEscape('Status', "Closed");
+r.setStringParameterNoEscape('UpdatedByUserLogin', "MYLA-BPW3");
+var response = r.execute();
+var responseBody = response.getBody();
+var httpStatus = response.getStatusCode();
+var responseObj = JSON.parse(responseBody);
+
+
+gs.info("HTTP STATUS CODE: " + httpStatus);]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-18 15:54:15</sys_created_on>
+        <sys_id>c406d47edb02330040b45608689619c8</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Upsert</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_script_fix_c406d47edb02330040b45608689619c8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-18 16:39:09</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

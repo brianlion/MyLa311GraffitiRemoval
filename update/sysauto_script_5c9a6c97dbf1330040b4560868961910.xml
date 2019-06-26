@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>GetMyLA311SRs</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 00:01:00</run_period>
+        <run_start>2019-06-26 17:20:00</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[var pageSize = 1;
+var startRowNum = 0;
+var newQuery = true;
+var lastPage = "false";
+
+try{
+	
+	// Format date to send as parameters in rest message
+	var date = new GlideDate();
+	var dateFormatted = date.getByFormat("MM/dd/yyyy");
+	
+	var time = new GlideDateTime();
+	var localTime = time.getLocalTime();
+	var timeFormatted = localTime.getByFormat("HH:mm:ss");
+	
+	var updatedTill = dateFormatted + " " + timeFormatted;
+	
+	time.subtract(60000);
+	var subtractedLocalTime = time.getLocalTime();
+	var subtractedTimeFormatted = subtractedLocalTime.getByFormat("HH:mm:ss");
+	
+	var updatedSince = dateFormatted + " " + subtractedTimeFormatted;
+	
+	while(lastPage == "false") {
+		// Send rest message and get response
+		var r = new sn_ws.RESTMessageV2('x_328401_mylagraff.GetSR', 'Final');
+		r.setStringParameterNoEscape('updatedSince', updatedSince);
+		r.setStringParameterNoEscape('updatedTill', updatedTill);
+		r.setStringParameterNoEscape('PageSize', pageSize);
+		r.setStringParameterNoEscape('NewQuery', newQuery);
+		r.setStringParameterNoEscape('StartRowNum', startRowNum);
+		var response = r.execute();
+		var responseBody = response.getBody();
+		var httpStatus = response.getStatusCode();
+		var responseObj = JSON.parse(responseBody);
+		
+		// Set parameters after first rest message
+		newQuery = false;
+		lastPage = responseObj.Response.LastPage;
+		startRowNum += 1;
+		
+		
+		var serviceRequestArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest.length;
+		
+		for(var i = 0; i < serviceRequestArrayLength; i++){
+			// 			gs.info("LENGTH = " + serviceRequestArrayLength);
+			// 			gs.info("i = " + i);
+			
+			
+			// Query record to see if it already exists
+			var gr = new GlideRecord('x_328401_mylagraff_removal_request');
+			gr.addQuery('service_request_number', responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRNumber);
+			gr.query();
+			// If not found, then create
+			if(!gr.next()){
+				gs.info("RECORD NOT FOUND");
+				
+				// Initialize the gliderecord if not found
+				gr.initialize();
+				
+				//Check if location exists in table and if it does, don't create and just set
+				var lr = new GlideRecord('cmn_location');
+				lr.addQuery('name', responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRAddress);
+				lr.query();
+				if(!lr.next()){
+					lr.initialize();
+					lr.name = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRAddress;
+					lr.latitude = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].Latitude;
+					lr.longitude = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].Longitude;
+					lr.update();
+				}
+				
+				// Mapping fields
+				// Set SR number
+				gr.service_request_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRNumber;
+				
+				// Set integration id
+				gr.integration_id = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].IntegrationId;
+				
+				// Set comments
+				var serviceRequestNotesArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes.length;
+				
+				for(var k = 0; k < serviceRequestNotesArrayLength; k++){
+					
+					var commentType = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes[k].CommentType;
+					
+					if(commentType == "Address Comments"){
+						gr.additional_location_information = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes[k].Comment;
+					}
+					else if (commentType == "External"){
+						gr.comment = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes[k].Comment;
+					}
+					else if (commentType == "Internal"){
+						gr.internal_comments = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes[k].Comment;
+					}
+				}
+				
+				// Set location field to newly created location record
+				var locationId = lr.getUniqueValue();
+				gr.location = locationId;
+				
+				// Set Priority
+				var responsePriority = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].Priority;
+				
+				if(responsePriority == "Normal"){
+					gr.priority = 1;
+				}
+				else if(responsePriority == "High"){
+					gr.priority = 2;
+				}
+				else if(responsePriority == "Escalated - 1"){
+					gr.priority = 3;
+				}
+				else {
+					gr.priority = 4;
+				}
+				
+				// Set Status
+				var reponseStatus = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].Status;
+				
+				if(reponseStatus == "Open"){
+					gr.state = 1;
+				}
+				else if(reponseStatus == "Closed"){
+					gr.state = 2;
+				}
+				else if(reponseStatus == "Cancelled"){
+					gr.state = 3;
+				}
+				else if(reponseStatus == "Pending"){
+					gr.state = 4;
+				}
+				else {
+					gr.state = 5;
+				}
+				
+				// Set Contact Info
+				gr.first_name = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].NewContactFirstName;
+				gr.last_name = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].NewContactLastName;
+				gr.email = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].NewContactEmail;
+				gr.phone_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].NewContactPhone;
+				gr.extension = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].PhoneNumberExtension;
+				
+				
+				// Mark checkboxes
+				var graffitiArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval.length;
+				
+				for(var j = 0; j < graffitiArrayLength; j++){
+					
+					var graffitiOn =			responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].GraffitiOn;
+					
+					var removalMethod =			responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].RemovalMethod;
+					
+					var firstFloorCase = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].FirstFloorCase;
+					
+					var muralCase = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].MuralCase;
+					
+					var contactType =			responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].ContactType;
+					
+					// Graffiti on checkboxes
+					switch (graffitiOn){
+						case "Alley-Door(s)":
+						gr.u_boolean_31 = true;
+						break;
+						case "Alley-Garage":
+						gr.u_boolean_32 = true;
+						break;
+						case "Alley-Wall(s)":
+						gr.u_boolean_33 = true;
+						break;
+						case "Barricade":
+						gr.u_boolean_34 = true;
+						break;
+						case "Brick Wall":
+						gr.u_boolean_35 = true;
+						break;
+						case "Bridge":
+						gr.u_boolean_36 = true;
+						break;
+						case "Building":
+						gr.u_boolean_37 = true;
+						break;
+						case "Concrete Block Wall":
+						gr.u_boolean_38 = true;
+						break;
+						case "Curb(s)":
+						gr.u_boolean_39 = true;
+						break;
+						case "Door(s)":
+						gr.u_boolean_40 = true;
+						break;
+						case "Driveway":
+						gr.u_boolean_41 = true;
+						break;
+						case "Fence":
+						gr.u_boolean_42 = true;
+						break;
+						case "Fire Hydrant":
+						gr.u_boolean_43 = true;
+						break;
+						case "Garage":
+						gr.u_boolean_44 = true;
+						break;
+						case "Granite Pole(s)":
+						gr.u_boolean_45 = true;
+						break;
+						case "House-Building":
+						gr.u_boolean_46 = true;
+						break;
+						case "Mailbox":
+						gr.u_boolean_47 = true;
+						break;
+						case "Metal Pole(s)":
+						gr.u_boolean_48 = true;
+						break;
+						case "Overpass":
+						gr.u_boolean_49 = true;
+						break;
+						case "Parking Lot":
+						gr.u_boolean_50 = true;
+						break;
+						case "Pedestrian Furniture":
+						gr.u_boolean_51 = true;
+						break;
+						case "Pedestrian Tunnel":
+						gr.u_boolean_52 = true;
+						break;
+						case "Red Curb":
+						gr.u_boolean_53 = true;
+						break;
+						case "Retaining Wall":
+						gr.u_boolean_54 = true;
+						break;
+						case "Roll Down Doors":
+						gr.u_boolean_55 = true;
+						break;
+						case "Sidewalk":
+						gr.u_boolean_56 = true;
+						break;
+						case "Soundwalls":
+						gr.u_boolean_57 = true;
+						break;
+						case "Stairs":
+						gr.u_boolean_58 = true;
+						break;
+						case "Stop Sign(s)":
+						gr.u_boolean_59 = true;
+						break;
+						case "Street Sign(s)":
+						gr.u_boolean_60 = true;
+						break;
+						case "Street(s)":
+						gr.u_boolean_61 = true;
+						break;
+						case "Stucco Wall(s)":
+						gr.u_boolean_62 = true;
+						break;
+						case "Telephone Pole(s)":
+						gr.u_boolean_63 = true;
+						break;
+						case "Traffic Control Box":
+						gr.u_boolean_64 = true;
+						break;
+						case "Traffic Sign(s)":
+						gr.u_boolean_65 = true;
+						break;
+						case "Tree(s)":
+						gr.u_boolean_66 = true;
+						break;
+						case "Underpass":
+						gr.u_boolean_67 = true;
+						break;
+						case "Walkway":
+						gr.u_boolean_68 = true;
+						break;
+						case "Wall(s)":
+						gr.u_boolean_69 = true;
+						break;
+						case "Windows":
+						gr.u_boolean_70 = true;
+						break;
+						case "Other":
+						gr.u_boolean_71 = true;
+						gr.graffiti_on = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].OtherGraffitiSurface;
+						break;
+					}
+					
+					// Removal method checkboxes
+					switch(removalMethod){
+						case "Chemical Solvent":
+						gr.u_boolean_75 = true;
+						break;
+						case "Sandblast / Waterblast":
+						gr.u_boolean_76 = true;
+						break;
+						case "Paint":
+						gr.u_boolean_77 = true;
+						gr.color = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].GraffitiPaintColor;
+						break;
+						case "No Preference":
+						gr.u_boolean_78 = true;
+						break;
+					}
+					
+					// Special cases checkboxes
+					if(firstFloorCase == "Y"){
+						gr.u_boolean_79 = true;
+					}
+					if (muralCase == "Y"){
+						gr.u_boolean_80 = true;
+					}
+					
+					// Contact type field
+					switch(contactType){
+						case "Manager":
+						gr.contact_type = "Manager";
+						break;
+						case "Owner":
+						gr.contact_type = "Owner";
+						break;
+						case "Resident":
+						gr.contact_type = "Resident";
+						break;
+						case "Other":
+						gr.contact_type = "Other";
+						break;
+					}
+					
+					
+				}
+				
+				// Insert record
+				gr.insert();
+			}
+			// ---------------------------Else update record------------------------------
+			else {
+				gs.info("RECORD FOUND");
+				//Check if location exists in table and if it does, don't create and just set
+				var lr = new GlideRecord('cmn_location');
+				lr.addQuery('name', responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRAddress);
+				lr.query();
+				if(!lr.next()){
+					lr.initialize();
+					lr.name = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRAddress;
+					lr.latitude = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].Latitude;
+					lr.longitude = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].Longitude;
+					lr.update();
+				}
+				
+				// Mapping fields
+				// Set SR number
+				gr.service_request_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRNumber;
+				
+				// Set integration id
+				gr.integration_id = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].IntegrationId;
+				
+				// Set comments
+				var serviceRequestNotesArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes.length;
+				
+				for(var k = 0; k < serviceRequestNotesArrayLength; k++){
+					
+					var commentType = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes[k].CommentType;
+					
+					if(commentType == "Address Comments"){
+						gr.additional_location_information = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes[k].Comment;
+					}
+					else if (commentType == "External"){
+						gr.comment = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes[k].Comment;
+					}
+					else if (commentType == "Internal"){
+						gr.internal_comments = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes[k].Comment;
+					}
+				}
+				
+				// Set location field to newly created location record
+				var locationId = lr.getUniqueValue();
+				gr.location = locationId;
+				
+				// Set Priority
+				var responsePriority = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].Priority;
+				
+				if(responsePriority == "Normal"){
+					gr.priority = 1;
+				}
+				else if(responsePriority == "High"){
+					gr.priority = 2;
+				}
+				else if(responsePriority == "Escalated - 1"){
+					gr.priority = 3;
+				}
+				else {
+					gr.priority = 4;
+				}
+				
+				// Set Status
+				var reponseStatus = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].Status;
+				
+				if(reponseStatus == "Open"){
+					gr.state = 1;
+				}
+				else if(reponseStatus == "Closed"){
+					gr.state = 2;
+				}
+				else if(reponseStatus == "Cancelled"){
+					gr.state = 3;
+				}
+				else if(reponseStatus == "Pending"){
+					gr.state = 4;
+				}
+				else {
+					gr.state = 5;
+				}
+				
+				// Set Contact Info
+				gr.first_name = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].NewContactFirstName;
+				gr.last_name = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].NewContactLastName;
+				gr.email = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].NewContactEmail;
+				gr.phone_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].NewContactPhone;
+				gr.extension = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].PhoneNumberExtension;
+				
+				// Mark checkboxes
+				var graffitiArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval.length;
+				
+				for(var j = 0; j < graffitiArrayLength; j++){
+					
+					var graffitiOn =			responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].GraffitiOn;
+					
+					var removalMethod =			responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].RemovalMethod;
+					
+					var firstFloorCase = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].FirstFloorCase;
+					
+					var muralCase = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].MuralCase;
+					
+					var contactType =			responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].ContactType;
+					
+					
+					// Graffiti on checkboxes
+					switch (graffitiOn){
+						case "Alley-Door(s)":
+						gr.u_boolean_31 = true;
+						break;
+						case "Alley-Garage":
+						gr.u_boolean_32 = true;
+						break;
+						case "Alley-Wall(s)":
+						gr.u_boolean_33 = true;
+						break;
+						case "Barricade":
+						gr.u_boolean_34 = true;
+						break;
+						case "Brick Wall":
+						gr.u_boolean_35 = true;
+						break;
+						case "Bridge":
+						gr.u_boolean_36 = true;
+						break;
+						case "Building":
+						gr.u_boolean_37 = true;
+						break;
+						case "Concrete Block Wall":
+						gr.u_boolean_38 = true;
+						break;
+						case "Curb(s)":
+						gr.u_boolean_39 = true;
+						break;
+						case "Door(s)":
+						gr.u_boolean_40 = true;
+						break;
+						case "Driveway":
+						gr.u_boolean_41 = true;
+						break;
+						case "Fence":
+						gr.u_boolean_42 = true;
+						break;
+						case "Fire Hydrant":
+						gr.u_boolean_43 = true;
+						break;
+						case "Garage":
+						gr.u_boolean_44 = true;
+						break;
+						case "Granite Pole(s)":
+						gr.u_boolean_45 = true;
+						break;
+						case "House-Building":
+						gr.u_boolean_46 = true;
+						break;
+						case "Mailbox":
+						gr.u_boolean_47 = true;
+						break;
+						case "Metal Pole(s)":
+						gr.u_boolean_48 = true;
+						break;
+						case "Overpass":
+						gr.u_boolean_49 = true;
+						break;
+						case "Parking Lot":
+						gr.u_boolean_50 = true;
+						break;
+						case "Pedestrian Furniture":
+						gr.u_boolean_51 = true;
+						break;
+						case "Pedestrian Tunnel":
+						gr.u_boolean_52 = true;
+						break;
+						case "Red Curb":
+						gr.u_boolean_53 = true;
+						break;
+						case "Retaining Wall":
+						gr.u_boolean_54 = true;
+						break;
+						case "Roll Down Doors":
+						gr.u_boolean_55 = true;
+						break;
+						case "Sidewalk":
+						gr.u_boolean_56 = true;
+						break;
+						case "Soundwalls":
+						gr.u_boolean_57 = true;
+						break;
+						case "Stairs":
+						gr.u_boolean_58 = true;
+						break;
+						case "Stop Sign(s)":
+						gr.u_boolean_59 = true;
+						break;
+						case "Street Sign(s)":
+						gr.u_boolean_60 = true;
+						break;
+						case "Street(s)":
+						gr.u_boolean_61 = true;
+						break;
+						case "Stucco Wall(s)":
+						gr.u_boolean_62 = true;
+						break;
+						case "Telephone Pole(s)":
+						gr.u_boolean_63 = true;
+						break;
+						case "Traffic Control Box":
+						gr.u_boolean_64 = true;
+						break;
+						case "Traffic Sign(s)":
+						gr.u_boolean_65 = true;
+						break;
+						case "Tree(s)":
+						gr.u_boolean_66 = true;
+						break;
+						case "Underpass":
+						gr.u_boolean_67 = true;
+						break;
+						case "Walkway":
+						gr.u_boolean_68 = true;
+						break;
+						case "Wall(s)":
+						gr.u_boolean_69 = true;
+						break;
+						case "Windows":
+						gr.u_boolean_70 = true;
+						break;
+						case "Other":
+						gr.u_boolean_71 = true;
+						gr.graffiti_on = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].OtherGraffitiSurface;
+						break;
+					}
+					
+					// Removal method checkboxes
+					switch(removalMethod){
+						case "Chemical Solvent":
+						gr.u_boolean_75 = true;
+						break;
+						case "Sandblast / Waterblast":
+						gr.u_boolean_76 = true;
+						break;
+						case "Paint":
+						gr.u_boolean_77 = true;
+						gr.color = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].GraffitiPaintColor;
+						break;
+						case "No Preference":
+						gr.u_boolean_78 = true;
+						break;
+					}
+					
+					// Special cases checkboxes
+					if(firstFloorCase == "Y"){
+						gr.u_boolean_79 = true;
+					}
+					if (muralCase == "Y"){
+						gr.u_boolean_80 = true;
+					}
+					
+					// Contact type field
+					switch(contactType){
+						case "Manager":
+						gr.contact_type = "Manager";
+						break;
+						case "Owner":
+						gr.contact_type = "Owner";
+						break;
+						case "Resident":
+						gr.contact_type = "Resident";
+						break;
+						case "Other":
+						gr.contact_type = "Other";
+						break;
+					}
+					
+					
+				}
+				
+				
+				// Update record
+				gr.update();
+			}
+		}
+	}
+	
+	
+	
+	
+}
+
+catch(ex){
+	var message = ex.getMessage();
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-07 20:04:53</sys_created_on>
+        <sys_id>5c9a6c97dbf1330040b4560868961910</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>GetMyLA311SRs</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sysauto_script_5c9a6c97dbf1330040b4560868961910</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-26 19:05:15</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Suggested Removal Method" section_id="c8ce29a1db91330040b45608689619dd" sys_domain="global" table="x_328401_mylagraff_removal_request" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_boolean_75</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-30 15:45:38</sys_created_on>
+            <sys_id>1ad2eaecdb31330040b45608689619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Suggested Removal Method" display_value="Suggested Removal Method" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">c8ce29a1db91330040b45608689619dd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-05-30 15:45:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_boolean_77</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-30 15:45:38</sys_created_on>
+            <sys_id>9ad2eaecdb31330040b45608689619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Suggested Removal Method" display_value="Suggested Removal Method" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">c8ce29a1db91330040b45608689619dd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-05-30 15:45:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>color</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-30 15:45:38</sys_created_on>
+            <sys_id>1ed2eaecdb31330040b45608689619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Suggested Removal Method" display_value="Suggested Removal Method" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">c8ce29a1db91330040b45608689619dd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-05-30 15:45:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-30 15:45:38</sys_created_on>
+            <sys_id>9ed2eaecdb31330040b45608689619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Suggested Removal Method" display_value="Suggested Removal Method" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">c8ce29a1db91330040b45608689619dd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-05-30 15:45:38</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_boolean_76</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-30 15:45:38</sys_created_on>
+            <sys_id>12d2eaecdb31330040b45608689619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Suggested Removal Method" display_value="Suggested Removal Method" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">c8ce29a1db91330040b45608689619dd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-05-30 15:45:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_boolean_78</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-30 15:45:38</sys_created_on>
+            <sys_id>92d2eaecdb31330040b45608689619e2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Suggested Removal Method" display_value="Suggested Removal Method" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">c8ce29a1db91330040b45608689619dd</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-05-30 15:45:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Suggested Removal Method</caption>
+            <header>false</header>
+            <name>x_328401_mylagraff_removal_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-08 18:00:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c8ce29a1db91330040b45608689619dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Suggested Removal Method</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+            <sys_update_name>sys_ui_section_c8ce29a1db91330040b45608689619dd</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-05-08 18:00:33</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

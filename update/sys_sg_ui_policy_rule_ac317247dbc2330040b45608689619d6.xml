@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_ui_policy_rule">
+    <sys_sg_ui_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>resolution_code</field>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_sg_ui_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-19 21:29:02</sys_created_on>
+        <sys_id>ac317247dbc2330040b45608689619d6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>resolution_code</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_sg_ui_policy_rule_ac317247dbc2330040b45608689619d6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-19 21:43:54</sys_updated_on>
+        <table>x_328401_mylagraff_removal_request</table>
+        <ui_policy display_value="Hide Resolution Code">4a113247dbc2330040b456086896196e</ui_policy>
+        <visible>false</visible>
+    </sys_sg_ui_policy_rule>
+</record_update>

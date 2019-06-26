@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_ui_policy_rule">
+    <sys_sg_ui_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>u_boolean_67</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_sg_ui_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-31 21:58:52</sys_created_on>
+        <sys_id>71d14145dbb1330040b4560868961907</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_boolean_67</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_sg_ui_policy_rule_71d14145dbb1330040b4560868961907</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-31 21:58:52</sys_updated_on>
+        <table>x_328401_mylagraff_removal_request</table>
+        <ui_policy display_value="Show Underpass">57b1cd05dbb1330040b45608689619cd</ui_policy>
+        <visible>true</visible>
+    </sys_sg_ui_policy_rule>
+</record_update>

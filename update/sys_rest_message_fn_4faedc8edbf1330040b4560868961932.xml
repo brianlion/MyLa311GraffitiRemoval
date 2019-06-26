@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+    "QueryRequest": {&#13;
+        "srType": [&#13;
+            "Graffiti Removal"&#13;
+        ],&#13;
+        "createdSince":  "06/03/2019 10:30:00",&#13;
+        "createdTill": "06/03/2019 11:00:00",&#13;
+        "SortBy": "Created Date",&#13;
+        "SortOrder": "DESC",&#13;
+        "NewQuery": "true",&#13;
+        "PageSize": "2",&#13;
+        "StartRowNum": "0"&#13;
+    }&#13;
+}</content>
+        <function_name>Multiple</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>GetSR [ Multiple ]</qualified_name>
+        <rest_endpoint>https://api-test.lacity.org/myla311_qa/QuerySRs</rest_endpoint>
+        <rest_message display_value="GetSR">eec8d9c2db21330040b4560868961911</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-03 21:59:12</sys_created_on>
+        <sys_id>4faedc8edbf1330040b4560868961932</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Multiple</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_rest_message_fn_4faedc8edbf1330040b4560868961932</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-06 16:51:16</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

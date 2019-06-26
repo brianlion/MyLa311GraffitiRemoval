@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_action_param_map">
+    <sys_sg_action_param_map action="INSERT_OR_UPDATE">
+        <button display_value="Close SR">3302a7d6db42330040b456086896194f</button>
+        <item_parameter display_value="Internal Comments">b7316c62db06330040b4560868961941</item_parameter>
+        <sys_class_name>sys_sg_action_param_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-17 21:46:13</sys_created_on>
+        <sys_id>a1f1e4a2db06330040b45608689619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b7316c62db06330040b4560868961941</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_sg_action_param_map_a1f1e4a2db06330040b45608689619b5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-17 21:46:13</sys_updated_on>
+        <ui_parameter display_value="Internal Comments">e281a0a2db06330040b4560868961964</ui_parameter>
+    </sys_sg_action_param_map>
+</record_update>
