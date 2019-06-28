@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="cleanup_hours" table="x_328401_mylagraff_removal_request" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>0</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>710dfbb5db52330040b45608689619b2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>0.25</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>310dfbb5db52330040b45608689619b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>0.25</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>0.5</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f90dfbb5db52330040b45608689619b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>0.5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>0.75</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b50dfbb5db52330040b45608689619b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>0.75</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>710dfbb5db52330040b45608689619b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1.25</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>5</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3d0dfbb5db52330040b45608689619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>1.25</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1.5</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>6</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f50dfbb5db52330040b45608689619bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>1.5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1.75</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>7</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b10dfbb5db52330040b45608689619be</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>1.75</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>8</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7d0dfbb5db52330040b45608689619bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2.25</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>9</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>390dfbb5db52330040b45608689619c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>2.25</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2.5</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>10</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f10dfbb5db52330040b45608689619c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>2.5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2.75</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>11</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bd0dfbb5db52330040b45608689619c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>2.75</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>3</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>12</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>790dfbb5db52330040b45608689619c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>3.25</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>13</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>350dfbb5db52330040b45608689619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>3.25</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>3.5</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>14</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fd0dfbb5db52330040b45608689619c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>3.5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>3.75</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>15</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b90dfbb5db52330040b45608689619cb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>3.75</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>16</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>750dfbb5db52330040b45608689619cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4.25</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>17</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>310dfbb5db52330040b45608689619cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>4.25</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4.5</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>18</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f90dfbb5db52330040b45608689619d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>4.5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4.75</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>19</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b50dfbb5db52330040b45608689619d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>4.75</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>cleanup_hours</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>5</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>20</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>710dfbb5db52330040b45608689619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>cleanup_hours</element>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 16:03:26</sys_created_on>
+            <sys_id>f90dfbb5db52330040b45608689619b2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>cleanup_hours</sys_name>
+            <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+            <sys_update_name>sys_choice_x_328401_mylagraff_removal_request_cleanup_hours</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 16:03:26</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -38,10 +38,12 @@
 		r.setStringParameterNoEscape('IntegrationId', current.integration_id);
 		r.setStringParameterNoEscape('ReasonCode', current.reason_code);
 		r.setStringParameterNoEscape('ResolutionCode', current.resolution_code);
-		//r.setStringParameterNoEscape('Status', current.state.getDisplayValue());
+		r.setStringParameterNoEscape('NumberofIncidents', current.number_of_incidents);
+		r.setStringParameterNoEscape('CleanupHours', current.cleanup_hours);
 		r.setStringParameterNoEscape('SquareFeetCleaned', current.square_feet_cleaned);
 		r.setStringParameterNoEscape('WorkersInvolved', current.number_of_workers);
 		r.setStringParameterNoEscape('CommentType', current.comment_type);
+		
 		if(current.comment_type == 'External'){
 			r.setStringParameterNoEscape('Comment', current.comment);
 		}
@@ -72,7 +74,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2460947adb02330040b45608689619f9</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Trigger Upsert</sys_name>
         <sys_overrides/>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
@@ -80,7 +82,7 @@
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_script_2460947adb02330040b45608689619f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-06-26 15:00:19</sys_updated_on>
+        <sys_updated_on>2019-06-28 16:20:22</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

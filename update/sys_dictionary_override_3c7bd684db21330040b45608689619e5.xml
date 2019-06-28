@@ -11,7 +11,7 @@
         <dependent_override>false</dependent_override>
         <display_override>false</display_override>
         <element>assigned_to</element>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <mandatory_override>true</mandatory_override>
         <name>x_328401_mylagraff_removal_request</name>
         <read_only>false</read_only>
@@ -22,13 +22,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-05-16 15:40:59</sys_created_on>
         <sys_id>3c7bd684db21330040b45608689619e5</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>assigned_to</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_dictionary_override_3c7bd684db21330040b45608689619e5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-05-16 17:14:20</sys_updated_on>
+        <sys_updated_on>2019-06-28 15:44:20</sys_updated_on>
     </sys_dictionary_override>
 </record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_style">
+    <sys_ui_style action="INSERT_OR_UPDATE">
+        <alt/>
+        <element>number_of_incidents</element>
+        <name>x_328401_mylagraff_removal_request</name>
+        <style>text-align:left;</style>
+        <sys_class_name>sys_ui_style</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-28 16:07:55</sys_created_on>
+        <sys_id>cdedf7f5db52330040b4560868961992</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_328401_mylagraff_removal_request</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_ui_style_cdedf7f5db52330040b4560868961992</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-28 16:07:55</sys_updated_on>
+        <value/>
+    </sys_ui_style>
+    <sys_translated_text action="delete_multiple" query="documentkey=cdedf7f5db52330040b4560868961992"/>
+</record_update>

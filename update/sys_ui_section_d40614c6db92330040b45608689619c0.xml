@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Closeout Information" section_id="d40614c6db92330040b45608689619c0" sys_domain="global" table="x_328401_mylagraff_removal_request" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cleanup_hours</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 17:52:35</sys_created_on>
+            <sys_id>2c0654c6db92330040b45608689619a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Closeout Information" display_value="Closeout Information" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">d40614c6db92330040b45608689619c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 17:52:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number_of_incidents</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 17:52:35</sys_created_on>
+            <sys_id>ac0654c6db92330040b45608689619a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Closeout Information" display_value="Closeout Information" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">d40614c6db92330040b45608689619c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 17:52:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reason_code</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 17:52:35</sys_created_on>
+            <sys_id>200654c6db92330040b45608689619a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Closeout Information" display_value="Closeout Information" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">d40614c6db92330040b45608689619c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 17:52:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 17:52:35</sys_created_on>
+            <sys_id>a00654c6db92330040b45608689619a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Closeout Information" display_value="Closeout Information" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">d40614c6db92330040b45608689619c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 17:52:35</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number_of_workers</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 17:52:35</sys_created_on>
+            <sys_id>240654c6db92330040b45608689619a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Closeout Information" display_value="Closeout Information" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">d40614c6db92330040b45608689619c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 17:52:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>square_feet_cleaned</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 17:52:35</sys_created_on>
+            <sys_id>a40654c6db92330040b45608689619a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Closeout Information" display_value="Closeout Information" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">d40614c6db92330040b45608689619c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 17:52:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>resolution_code</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 17:52:35</sys_created_on>
+            <sys_id>280654c6db92330040b45608689619a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Closeout Information" display_value="Closeout Information" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">d40614c6db92330040b45608689619c0</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 17:52:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Closeout Information</caption>
+            <header>false</header>
+            <name>x_328401_mylagraff_removal_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d40614c6db92330040b45608689619c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Closeout Information</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+            <sys_update_name>sys_ui_section_d40614c6db92330040b45608689619c0</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -12,7 +12,7 @@
         "updatedSince":  "${updatedSince}",&#13;
         "updatedTill": "${updatedTill}",&#13;
         "SortBy": "Created Date",&#13;
-        "SortOrder": "DESC",&#13;
+        "SortOrder": "ASC",&#13;
         "NewQuery": "${NewQuery}",&#13;
         "PageSize": "${PageSize}",&#13;
         "StartRowNum": "${StartRowNum}"&#13;
@@ -30,14 +30,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-06 16:52:58</sys_created_on>
         <sys_id>c925ba3adb71330040b45608689619b1</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Final</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_rest_message_fn_c925ba3adb71330040b45608689619b1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-06-06 17:11:51</sys_updated_on>
+        <sys_updated_on>2019-06-28 15:40:11</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
     <sysauto_script action="INSERT_OR_UPDATE">
-        <active>false</active>
+        <active>true</active>
         <condition/>
         <conditional>false</conditional>
         <name>GetMyLA311SRs</name>
@@ -8,8 +8,8 @@
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
-        <run_period>1970-01-01 00:01:00</run_period>
-        <run_start>2019-06-26 17:20:00</run_start>
+        <run_period>1970-01-01 00:02:00</run_period>
+        <run_start>2019-06-28 17:13:00</run_start>
         <run_time>1970-01-01 08:00:00</run_time>
         <run_type>periodically</run_type>
         <script><![CDATA[var pageSize = 1;
@@ -29,7 +29,7 @@ try{
 	
 	var updatedTill = dateFormatted + " " + timeFormatted;
 	
-	time.subtract(60000);
+	time.subtract(120000);
 	var subtractedLocalTime = time.getLocalTime();
 	var subtractedTimeFormatted = subtractedLocalTime.getByFormat("HH:mm:ss");
 	
@@ -57,9 +57,6 @@ try{
 		var serviceRequestArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest.length;
 		
 		for(var i = 0; i < serviceRequestArrayLength; i++){
-			// 			gs.info("LENGTH = " + serviceRequestArrayLength);
-			// 			gs.info("i = " + i);
-			
 			
 			// Query record to see if it already exists
 			var gr = new GlideRecord('x_328401_mylagraff_removal_request');
@@ -90,6 +87,12 @@ try{
 				
 				// Set integration id
 				gr.integration_id = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].IntegrationId;
+				
+				// Set council district
+				gr.council_district = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRCouncilDistrictNo;
+				
+				// Set source of request
+				gr.source_of_request = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].Source;
 				
 				// Set comments
 				var serviceRequestNotesArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes.length;
@@ -156,7 +159,7 @@ try{
 				gr.extension = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].PhoneNumberExtension;
 				
 				
-				// Mark checkboxes
+				// Graffiti removal array
 				var graffitiArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval.length;
 				
 				for(var j = 0; j < graffitiArrayLength; j++){
@@ -368,6 +371,16 @@ try{
 				// Set integration id
 				gr.integration_id = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].IntegrationId;
 				
+				// Set council district
+				gr.council_district = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRCouncilDistrictNo;
+				
+				// Set source of request
+				gr.source_of_request = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].Source;
+				
+				// Set reason and resolution code
+				gr.reason_code = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ReasonCode;
+				gr.resolution_code = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ResolutionCode;
+				
 				// Set comments
 				var serviceRequestNotesArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes.length;
 				
@@ -432,7 +445,7 @@ try{
 				gr.phone_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].NewContactPhone;
 				gr.extension = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].PhoneNumberExtension;
 				
-				// Mark checkboxes
+				// Graffiti removal array
 				var graffitiArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval.length;
 				
 				for(var j = 0; j < graffitiArrayLength; j++){
@@ -617,6 +630,14 @@ try{
 						break;
 					}
 					
+					// Set additional closeout information
+					gr.number_of_incidents = parseInt(responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].NumberofIncidents, 10);
+					gs.info("AS A STRING: " + responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].NumberofIncidents);
+					gs.info("AS AN INT: " + parseInt(responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].NumberofIncidents, 10));
+					gr.cleanup_hours = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].CleanupHours;
+					gr.number_of_workers = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].WorkersInvolved;
+					gr.square_feet_cleaned = parseInt(responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].SquareFeetCleaned, 10);
+					
 					
 				}
 				
@@ -639,14 +660,14 @@ catch(ex){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-07 20:04:53</sys_created_on>
         <sys_id>5c9a6c97dbf1330040b4560868961910</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>GetMyLA311SRs</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sysauto_script_5c9a6c97dbf1330040b4560868961910</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-06-26 19:05:15</sys_updated_on>
+        <sys_updated_on>2019-06-28 17:34:11</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

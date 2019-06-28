@@ -4,13 +4,13 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:26</sys_created_on>
-            <sys_id>0e0439c1db16330040b45608689619b1</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>500654c6db92330040b4560868961977</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:26</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>service_request_number</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:26</sys_created_on>
-            <sys_id>060439c1db16330040b45608689619b2</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>d00654c6db92330040b4560868961977</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:26</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>assigned_to</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>860439c1db16330040b45608689619b2</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>540654c6db92330040b4560868961977</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>location</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>0a0439c1db16330040b45608689619b2</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>d40654c6db92330040b4560868961977</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>.split</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>8a0439c1db16330040b45608689619b2</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>580654c6db92330040b4560868961977</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>priority</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>0e0439c1db16330040b45608689619b2</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>d80654c6db92330040b4560868961977</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>state</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>8e0439c1db16330040b45608689619b2</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>5c0654c6db92330040b4560868961977</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,153 +102,125 @@
             <element>active</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>020439c1db16330040b45608689619b3</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>dc0654c6db92330040b4560868961977</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>council_district</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>500654c6db92330040b4560868961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>source_of_request</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>d00654c6db92330040b4560868961978</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>8</position>
+            <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>820439c1db16330040b45608689619b3</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>540654c6db92330040b4560868961978</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>additional_location_information</element>
-            <position>9</position>
+            <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>060439c1db16330040b45608689619b3</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>d40654c6db92330040b4560868961978</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>comment_type</element>
-            <position>10</position>
+            <position>12</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>860439c1db16330040b45608689619b3</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>580654c6db92330040b4560868961978</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>comment</element>
-            <position>11</position>
+            <position>13</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>0a0439c1db16330040b45608689619b3</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>d80654c6db92330040b4560868961978</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>internal_comments</element>
-            <position>12</position>
+            <position>14</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>8a0439c1db16330040b45608689619b3</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>5c0654c6db92330040b4560868961978</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>integration_id</element>
-            <position>13</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>0e0439c1db16330040b45608689619b3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>reason_code</element>
-            <position>14</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>8e0439c1db16330040b45608689619b3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>resolution_code</element>
             <position>15</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>020439c1db16330040b45608689619b4</sys_id>
+            <sys_created_on>2019-06-28 17:52:34</sys_created_on>
+            <sys_id>dc0654c6db92330040b4560868961978</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number_of_workers</element>
-            <position>16</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>820439c1db16330040b45608689619b4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>square_feet_cleaned</element>
-            <position>17</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-06-25 22:09:27</sys_created_on>
-            <sys_id>060439c1db16330040b45608689619b4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">808d0de9db11330040b456086896190a</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-25 22:09:27</sys_updated_on>
+            <sys_updated_on>2019-06-28 17:52:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
