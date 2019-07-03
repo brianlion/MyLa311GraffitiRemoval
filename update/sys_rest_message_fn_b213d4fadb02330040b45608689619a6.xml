@@ -10,6 +10,7 @@
         "UpdatedByUserLogin": "${UpdatedByUserLogin}",&#13;
         "ReasonCode": "${ReasonCode}",&#13;
         "ResolutionCode": "${ResolutionCode}",&#13;
+        "ClosedDate": "${ClosedDate}",&#13;
         "ListOfLa311GraffitiRemoval": {&#13;
             "GraffitiRemoval": [&#13;
                 {&#13;
@@ -27,8 +28,7 @@
                 {&#13;
                     "Comment": "${Comment}",&#13;
                     "CreatedByUser": "MYLA-BPW3",&#13;
-                    "CommentType": "${CommentType}",&#13;
-                    "IntegrationId": "${IntegrationId}"&#13;
+                    "CommentType": "${CommentType}"&#13;
                 }&#13;
             ]&#13;
         }&#13;
@@ -46,14 +46,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-18 15:21:48</sys_created_on>
         <sys_id>b213d4fadb02330040b45608689619a6</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>PostSR</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_rest_message_fn_b213d4fadb02330040b45608689619a6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-06-28 16:17:43</sys_updated_on>
+        <sys_updated_on>2019-07-03 15:37:54</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>

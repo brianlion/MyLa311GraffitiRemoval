@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-02 18:58:18</sys_created_on>
+        <sys_id>166b89dbdb92330040b4560868961941</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_328401_mylagraff_assigned_to.x_328401_mylagraff.user</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_security_acl display_value="x_328401_mylagraff_assigned_to">5a6b89dbdb92330040b456086896193e</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_166b89dbdb92330040b4560868961941</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-02 18:58:18</sys_updated_on>
+        <sys_user_role display_value="x_328401_mylagraff.user" name="x_328401_mylagraff.user">1dd1c1e5db11330040b456086896193b</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

@@ -6,32 +6,32 @@
         <constant/>
         <default_value/>
         <default_value_type>source_field</default_value_type>
-        <field_name/>
+        <field_name>cleanup_hours</field_name>
         <input_source>user</input_source>
         <input_style>inline</input_style>
-        <input_type>text</input_type>
-        <mandatory>false</mandatory>
+        <input_type>list</input_type>
+        <mandatory>true</mandatory>
         <multi_select>false</multi_select>
-        <name>Internal Comments</name>
-        <order>700</order>
+        <name>Cleanup Hours</name>
+        <order>100</order>
         <parameter_type>button</parameter_type>
         <placeholder/>
         <screen/>
         <search_type>starts_with</search_type>
-        <source_field>internal_comments</source_field>
+        <source_field>cleanup_hours</source_field>
         <sys_class_name>sys_sg_ui_parameter</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2019-06-17 21:45:25</sys_created_on>
-        <sys_id>e281a0a2db06330040b4560868961964</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_name>Internal Comments</sys_name>
+        <sys_created_on>2019-07-02 15:35:02</sys_created_on>
+        <sys_id>b23cd81fdb12330040b4560868961988</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Cleanup Hours</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
-        <sys_update_name>sys_sg_ui_parameter_e281a0a2db06330040b4560868961964</sys_update_name>
+        <sys_update_name>sys_sg_ui_parameter_b23cd81fdb12330040b4560868961988</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-02 15:38:28</sys_updated_on>
-        <table_name/>
+        <sys_updated_on>2019-07-02 15:37:36</sys_updated_on>
+        <table_name>x_328401_mylagraff_removal_request</table_name>
     </sys_sg_ui_parameter>
-    <sys_translated_text action="delete_multiple" query="documentkey=e281a0a2db06330040b4560868961964"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=b23cd81fdb12330040b4560868961988"/>
 </record_update>

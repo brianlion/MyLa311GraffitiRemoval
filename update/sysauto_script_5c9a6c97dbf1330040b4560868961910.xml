@@ -85,9 +85,6 @@ try{
 				// Set SR number
 				gr.service_request_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRNumber;
 				
-				// Set integration id
-				gr.integration_id = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].IntegrationId;
-				
 				// Set council district
 				gr.council_district = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRCouncilDistrictNo;
 				
@@ -97,6 +94,62 @@ try{
 				// Set comments
 				var serviceRequestNotesArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes.length;
 				
+				
+				// Set assigned to
+				var assignedTo = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].AssignTo;
+				var assignedToSysId;
+				var assignedToName;
+				switch(assignedTo){
+					case "CCAC":
+						assignedToSysId = 	"44cb011fdb92330040b45608689619ce";
+						break;
+					case "GAP":
+						assignedToSysId = 	"f3cb011fdb92330040b4560868961923";
+						break;
+					case "GAPBH":
+						assignedToSysId = 	"a9db011fdb92330040b456086896195e";
+						break;
+					case "GCS":
+						assignedToSysId = 	"0aeb49dbdb92330040b45608689619cd";
+						break;
+					case "HBT":
+						assignedToSysId = 	"65fb811fdb92330040b4560868961947";
+						break;
+					case "LACC":
+						assignedToSysId = 	"e3fbc11fdb92330040b4560868961972";
+						break;
+					case "NDFY":
+						assignedToSysId = 	"a10c811fdb92330040b4560868961939";
+						break;
+					case "NEGB":
+						assignedToSysId = 	"5c1c011fdb92330040b45608689619fc";
+						break;
+					case "NEGB_ELA":
+						assignedToSysId = 	"7a1c011fdb92330040b456086896197d";
+						break;
+					case "OCB":
+						assignedToSysId = 	"e22cc11fdb92330040b45608689619c9";
+						break;
+					case "PGS":
+						assignedToSysId = 	"d93c811fdb92330040b456086896193c";
+						break;
+					case "SGB":
+						assignedToSysId = 	"273ccddbdb92330040b4560868961994";
+						break;
+					case "SLABT":
+						assignedToSysId = 	"cabcc11fdb92330040b45608689619d0";
+						break;
+					case "SVGB":
+						assignedToSysId = 	"adcc891fdb92330040b456086896190b";
+						break;
+					case "WVA":
+						assignedToSysId = 	"00dcc51fdb92330040b4560868961926";
+						break;
+				}
+				
+				gr.assigned_to_custom = assignedToSysId;
+				gr.ticket_owner = "eb1b85dbdb92330040b45608689619b0";
+			
 				for(var k = 0; k < serviceRequestNotesArrayLength; k++){
 					
 					var commentType = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes[k].CommentType;
@@ -368,9 +421,6 @@ try{
 				// Set SR number
 				gr.service_request_number = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRNumber;
 				
-				// Set integration id
-				gr.integration_id = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].IntegrationId;
-				
 				// Set council district
 				gr.council_district = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].SRCouncilDistrictNo;
 				
@@ -383,6 +433,61 @@ try{
 				
 				// Set comments
 				var serviceRequestNotesArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes.length;
+				
+				// Set assigned to
+				var assignedTo = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].AssignTo;
+				var assignedToSysId;
+				var assignedToName;
+				switch(assignedTo){
+					case "CCAC":
+						assignedToSysId = 	"44cb011fdb92330040b45608689619ce";
+						break;
+					case "GAP":
+						assignedToSysId = 	"f3cb011fdb92330040b4560868961923";
+						break;
+					case "GAPBH":
+						assignedToSysId = 	"a9db011fdb92330040b456086896195e";
+						break;
+					case "GCS":
+						assignedToSysId = 	"0aeb49dbdb92330040b45608689619cd";
+						break;
+					case "HBT":
+						assignedToSysId = 	"65fb811fdb92330040b4560868961947";
+						break;
+					case "LACC":
+						assignedToSysId = 	"e3fbc11fdb92330040b4560868961972";
+						break;
+					case "NDFY":
+						assignedToSysId = 	"a10c811fdb92330040b4560868961939";
+						break;
+					case "NEGB":
+						assignedToSysId = 	"5c1c011fdb92330040b45608689619fc";
+						break;
+					case "NEGB_ELA":
+						assignedToSysId = 	"7a1c011fdb92330040b456086896197d";
+						break;
+					case "OCB":
+						assignedToSysId = 	"e22cc11fdb92330040b45608689619c9";
+						break;
+					case "PGS":
+						assignedToSysId = 	"d93c811fdb92330040b456086896193c";
+						break;
+					case "SGB":
+						assignedToSysId = 	"273ccddbdb92330040b4560868961994";
+						break;
+					case "SLABT":
+						assignedToSysId = 	"cabcc11fdb92330040b45608689619d0";
+						break;
+					case "SVGB":
+						assignedToSysId = 	"adcc891fdb92330040b456086896190b";
+						break;
+					case "WVA":
+						assignedToSysId = 	"00dcc51fdb92330040b4560868961926";
+						break;
+				}
+				
+				gr.assigned_to_custom = assignedToSysId;
+				gr.ticket_owner = "eb1b85dbdb92330040b45608689619b0";
 				
 				for(var k = 0; k < serviceRequestNotesArrayLength; k++){
 					
@@ -630,10 +735,8 @@ try{
 						break;
 					}
 					
-					// Set additional closeout information
+					// Set additional closeout information (only for updating?)
 					gr.number_of_incidents = parseInt(responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].NumberofIncidents, 10);
-					gs.info("AS A STRING: " + responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].NumberofIncidents);
-					gs.info("AS AN INT: " + parseInt(responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].NumberofIncidents, 10));
 					gr.cleanup_hours = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].CleanupHours;
 					gr.number_of_workers = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].WorkersInvolved;
 					gr.square_feet_cleaned = parseInt(responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].SquareFeetCleaned, 10);
@@ -660,14 +763,14 @@ catch(ex){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-07 20:04:53</sys_created_on>
         <sys_id>5c9a6c97dbf1330040b4560868961910</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>GetMyLA311SRs</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sysauto_script_5c9a6c97dbf1330040b4560868961910</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-06-28 17:34:11</sys_updated_on>
+        <sys_updated_on>2019-07-03 15:57:25</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

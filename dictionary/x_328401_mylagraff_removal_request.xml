@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Removal Request" max_length="40" name="x_328401_mylagraff_removal_request" sizeclass="8" type="collection">
+    <element extends="task" label="Removal Request" max_length="40" name="x_328401_mylagraff_removal_request" sizeclass="11" type="collection">
         <element label="Additional Location Information" max_length="250" name="additional_location_information" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Assigned To" max_length="40" name="assigned_to_custom" reference="x_328401_mylagraff_assigned_to" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Cleanup Hours" max_length="40" name="cleanup_hours" type="string">
             <choice>
                 <element inactive_on_update="false" label="0" sequence="0" value="0"/>
@@ -39,7 +40,6 @@
         <element label="Extension" max_length="40" name="extension" type="string"/>
         <element label="First Name" max_length="40" name="first_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Graffiti on" max_length="40" name="graffiti_on" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="IntegrationId" max_length="40" name="integration_id" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Internal Comments" max_length="750" name="internal_comments" type="string"/>
         <element label="Last Name" max_length="40" name="last_name" type="string"/>
         <element label="Number of Incidents" max_length="40" name="number_of_incidents" type="integer"/>
@@ -88,6 +88,7 @@
         <element label="Service Request Number" max_length="40" name="service_request_number" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Source of Request" max_length="40" name="source_of_request" type="string"/>
         <element label="Square Feet Cleaned" max_length="5" name="square_feet_cleaned" type="integer"/>
+        <element label="Ticket Owner" max_length="32" name="ticket_owner" reference="x_328401_mylagraff_ticket_owner" type="reference"/>
         <element label="New True/False" max_length="40" name="u_boolean_1" type="boolean"/>
         <element label="Alley-Door(s)" max_length="40" name="u_boolean_31" type="boolean"/>
         <element label="Alley-Garage" max_length="40" name="u_boolean_32" type="boolean"/>
@@ -152,7 +153,9 @@
             </choice>
         </element>
         <element label="New File Attachment" max_length="40" name="u_file_attachment_82" type="file_attachment"/>
+        <element label="Ticket Owner" max_length="32" name="u_reference_1" reference="x_328401_mylagraff_ticket_owner" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Graffiti On" max_length="40" name="u_string_72" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Suggested Removal Method" max_length="40" name="u_string_73" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Work Completion Date" max_length="40" name="work_completion_date" type="string"/>
     </element>
 </database>
