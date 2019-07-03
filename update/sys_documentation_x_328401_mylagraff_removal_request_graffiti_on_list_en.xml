@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="graffiti_on" label="Other" language="en" table="x_328401_mylagraff_removal_request">
+    <sys_documentation element="graffiti_on_list" label="Graffiti On" language="en" table="x_328401_mylagraff_removal_request">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>graffiti_on</element>
+            <element>graffiti_on_list</element>
             <help/>
             <hint/>
-            <label>Other</label>
+            <label>Graffiti On</label>
             <language>en</language>
             <name>x_328401_mylagraff_removal_request</name>
-            <plural>Others</plural>
+            <plural>Graffiti Ons</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-05-30 15:45:36</sys_created_on>
-            <sys_id>48cee3b9db12330040b45608689619e1</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_name>Other</sys_name>
+            <sys_created_on>2019-07-03 16:03:28</sys_created_on>
+            <sys_id>4bfc25efdb12330040b45608689619fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Graffiti On</sys_name>
             <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
             <sys_policy/>
             <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
-            <sys_update_name>sys_documentation_x_328401_mylagraff_removal_request_graffiti_on_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_328401_mylagraff_removal_request_graffiti_on_list_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-07-03 20:15:46</sys_updated_on>
+            <sys_updated_on>2019-07-03 16:03:28</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

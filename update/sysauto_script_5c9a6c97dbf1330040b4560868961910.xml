@@ -101,55 +101,55 @@ try{
 				var assignedToName;
 				switch(assignedTo){
 					case "CCAC":
-						assignedToSysId = 	"44cb011fdb92330040b45608689619ce";
-						break;
+					assignedToSysId = 	"44cb011fdb92330040b45608689619ce";
+					break;
 					case "GAP":
-						assignedToSysId = 	"f3cb011fdb92330040b4560868961923";
-						break;
+					assignedToSysId = 	"f3cb011fdb92330040b4560868961923";
+					break;
 					case "GAPBH":
-						assignedToSysId = 	"a9db011fdb92330040b456086896195e";
-						break;
+					assignedToSysId = 	"a9db011fdb92330040b456086896195e";
+					break;
 					case "GCS":
-						assignedToSysId = 	"0aeb49dbdb92330040b45608689619cd";
-						break;
+					assignedToSysId = 	"0aeb49dbdb92330040b45608689619cd";
+					break;
 					case "HBT":
-						assignedToSysId = 	"65fb811fdb92330040b4560868961947";
-						break;
+					assignedToSysId = 	"65fb811fdb92330040b4560868961947";
+					break;
 					case "LACC":
-						assignedToSysId = 	"e3fbc11fdb92330040b4560868961972";
-						break;
+					assignedToSysId = 	"e3fbc11fdb92330040b4560868961972";
+					break;
 					case "NDFY":
-						assignedToSysId = 	"a10c811fdb92330040b4560868961939";
-						break;
+					assignedToSysId = 	"a10c811fdb92330040b4560868961939";
+					break;
 					case "NEGB":
-						assignedToSysId = 	"5c1c011fdb92330040b45608689619fc";
-						break;
+					assignedToSysId = 	"5c1c011fdb92330040b45608689619fc";
+					break;
 					case "NEGB_ELA":
-						assignedToSysId = 	"7a1c011fdb92330040b456086896197d";
-						break;
+					assignedToSysId = 	"7a1c011fdb92330040b456086896197d";
+					break;
 					case "OCB":
-						assignedToSysId = 	"e22cc11fdb92330040b45608689619c9";
-						break;
+					assignedToSysId = 	"e22cc11fdb92330040b45608689619c9";
+					break;
 					case "PGS":
-						assignedToSysId = 	"d93c811fdb92330040b456086896193c";
-						break;
+					assignedToSysId = 	"d93c811fdb92330040b456086896193c";
+					break;
 					case "SGB":
-						assignedToSysId = 	"273ccddbdb92330040b4560868961994";
-						break;
+					assignedToSysId = 	"273ccddbdb92330040b4560868961994";
+					break;
 					case "SLABT":
-						assignedToSysId = 	"cabcc11fdb92330040b45608689619d0";
-						break;
+					assignedToSysId = 	"cabcc11fdb92330040b45608689619d0";
+					break;
 					case "SVGB":
-						assignedToSysId = 	"adcc891fdb92330040b456086896190b";
-						break;
+					assignedToSysId = 	"adcc891fdb92330040b456086896190b";
+					break;
 					case "WVA":
-						assignedToSysId = 	"00dcc51fdb92330040b4560868961926";
-						break;
+					assignedToSysId = 	"00dcc51fdb92330040b4560868961926";
+					break;
 				}
 				
 				gr.assigned_to_custom = assignedToSysId;
 				gr.ticket_owner = "eb1b85dbdb92330040b45608689619b0";
-			
+				
 				for(var k = 0; k < serviceRequestNotesArrayLength; k++){
 					
 					var commentType = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311ServiceRequestNotes.La311ServiceRequestNotes[k].CommentType;
@@ -215,6 +215,9 @@ try{
 				// Graffiti removal array
 				var graffitiArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval.length;
 				
+				// Array for graffiti on list
+				var graffitiOnArray = [];
+				
 				for(var j = 0; j < graffitiArrayLength; j++){
 					
 					var graffitiOn =			responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].GraffitiOn;
@@ -230,127 +233,127 @@ try{
 					// Graffiti on checkboxes
 					switch (graffitiOn){
 						case "Alley-Door(s)":
-						gr.u_boolean_31 = true;
+						graffitiOnArray.push("ced775abdb52330040b4560868961923");
 						break;
 						case "Alley-Garage":
-						gr.u_boolean_32 = true;
+						graffitiOnArray.push("06e7f1abdb52330040b45608689619d5");
 						break;
 						case "Alley-Wall(s)":
-						gr.u_boolean_33 = true;
+						graffitiOnArray.push("83e735abdb52330040b4560868961916");
 						break;
 						case "Barricade":
-						gr.u_boolean_34 = true;
+						graffitiOnArray.push("d4f7f1abdb52330040b45608689619ee");
 						break;
 						case "Brick Wall":
-						gr.u_boolean_35 = true;
+						graffitiOnArray.push("1908b16bdb52330040b45608689619e7");
 						break;
 						case "Bridge":
-						gr.u_boolean_36 = true;
+						graffitiOnArray.push("6a0831abdb52330040b45608689619e9");
 						break;
 						case "Building":
-						gr.u_boolean_37 = true;
+						graffitiOnArray.push("1f08b5abdb52330040b4560868961918");
 						break;
 						case "Concrete Block Wall":
-						gr.u_boolean_38 = true;
+						graffitiOnArray.push("4c3879abdb52330040b4560868961936");
 						break;
 						case "Curb(s)":
-						gr.u_boolean_39 = true;
+						graffitiOnArray.push("a83839abdb52330040b4560868961947");
 						break;
 						case "Door(s)":
-						gr.u_boolean_40 = true;
+						graffitiOnArray.push("bd3875abdb52330040b4560868961940");
 						break;
 						case "Driveway":
-						gr.u_boolean_41 = true;
+						graffitiOnArray.push("d33879abdb52330040b456086896193a");
 						break;
 						case "Fence":
-						gr.u_boolean_42 = true;
+						graffitiOnArray.push("bc4879abdb52330040b45608689619cd");
 						break;
 						case "Fire Hydrant":
-						gr.u_boolean_43 = true;
+						graffitiOnArray.push("8e4879abdb52330040b45608689619f1");
 						break;
 						case "Garage":
-						gr.u_boolean_44 = true;
+						graffitiOnArray.push("ae48b9abdb52330040b4560868961961");
 						break;
 						case "Granite Pole(s)":
-						gr.u_boolean_45 = true;
+						graffitiOnArray.push("9958f9abdb52330040b4560868961941");
 						break;
 						case "House-Building":
-						gr.u_boolean_46 = true;
+						graffitiOnArray.push("8b5839abdb52330040b45608689619f3");
 						break;
 						case "Mailbox":
-						gr.u_boolean_47 = true;
+						graffitiOnArray.push("735839abdb52330040b4560868961920");
 						break;
 						case "Metal Pole(s)":
-						gr.u_boolean_48 = true;
+						graffitiOnArray.push("566839abdb52330040b45608689619e9");
 						break;
 						case "Overpass":
-						gr.u_boolean_49 = true;
+						graffitiOnArray.push("0e783dabdb52330040b4560868961952");
 						break;
 						case "Parking Lot":
-						gr.u_boolean_50 = true;
+						graffitiOnArray.push("df88f5abdb52330040b45608689619a5");
 						break;
 						case "Pedestrian Furniture":
-						gr.u_boolean_51 = true;
+						graffitiOnArray.push("b3883dabdb52330040b45608689619dc");
 						break;
 						case "Pedestrian Tunnel":
-						gr.u_boolean_52 = true;
+						graffitiOnArray.push("659839abdb52330040b45608689619cd");
 						break;
 						case "Red Curb":
-						gr.u_boolean_53 = true;
+						graffitiOnArray.push("fe987dabdb52330040b4560868961958");
 						break;
 						case "Retaining Wall":
-						gr.u_boolean_54 = true;
+						graffitiOnArray.push("3f98f9abdb52330040b456086896196f");
 						break;
 						case "Roll Down Doors":
-						gr.u_boolean_55 = true;
+						graffitiOnArray.push("b0a8fdabdb52330040b456086896196d");
 						break;
 						case "Sidewalk":
-						gr.u_boolean_56 = true;
+						graffitiOnArray.push("9ea83dabdb52330040b45608689619e4");
 						break;
 						case "Soundwalls":
-						gr.u_boolean_57 = true;
+						graffitiOnArray.push("eba87dabdb52330040b4560868961938");
 						break;
 						case "Stairs":
-						gr.u_boolean_58 = true;
+						graffitiOnArray.push("18b8f5abdb52330040b45608689619be");
 						break;
 						case "Stop Sign(s)":
-						gr.u_boolean_59 = true;
+						graffitiOnArray.push("95b83dabdb52330040b456086896195b");
 						break;
 						case "Street Sign(s)":
-						gr.u_boolean_60 = true;
+						graffitiOnArray.push("deb87dabdb52330040b45608689619c0");
 						break;
 						case "Street(s)":
-						gr.u_boolean_61 = true;
+						graffitiOnArray.push("bbb831ebdb52330040b4560868961942");
 						break;
 						case "Stucco Wall(s)":
-						gr.u_boolean_62 = true;
+						graffitiOnArray.push("30c871ebdb52330040b4560868961921");
 						break;
 						case "Telephone Pole(s)":
-						gr.u_boolean_63 = true;
+						graffitiOnArray.push("b9c8fdabdb52330040b456086896193f");
 						break;
 						case "Traffic Control Box":
-						gr.u_boolean_64 = true;
+						graffitiOnArray.push("8bc831ebdb52330040b4560868961990");
 						break;
 						case "Traffic Sign(s)":
-						gr.u_boolean_65 = true;
+						graffitiOnArray.push("88d831ebdb52330040b456086896194e");
 						break;
 						case "Tree(s)":
-						gr.u_boolean_66 = true;
+						graffitiOnArray.push("95d831ebdb52330040b456086896194b");
 						break;
 						case "Underpass":
-						gr.u_boolean_67 = true;
+						graffitiOnArray.push("12d8b1ebdb52330040b456086896193f");
 						break;
 						case "Walkway":
-						gr.u_boolean_68 = true;
+						graffitiOnArray.push("4fd8b1ebdb52330040b45608689619ba");
 						break;
 						case "Wall(s)":
-						gr.u_boolean_69 = true;
+						graffitiOnArray.push("45e871ebdb52330040b45608689619e9");
 						break;
 						case "Windows":
-						gr.u_boolean_70 = true;
+						graffitiOnArray.push("0ba939ebdb52330040b4560868961953");
 						break;
 						case "Other":
-						gr.u_boolean_71 = true;
+						graffitiOnArray.push("5d78f9abdb52330040b4560868961945");
 						gr.graffiti_on = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].OtherGraffitiSurface;
 						break;
 					}
@@ -399,6 +402,10 @@ try{
 					
 				}
 				
+				// Setting graffiti on list
+				var graffitiOnConcat = graffitiOnArray.join();
+				gr.graffiti_on_list = graffitiOnConcat;
+				
 				// Insert record
 				gr.insert();
 			}
@@ -440,50 +447,50 @@ try{
 				var assignedToName;
 				switch(assignedTo){
 					case "CCAC":
-						assignedToSysId = 	"44cb011fdb92330040b45608689619ce";
-						break;
+					assignedToSysId = 	"44cb011fdb92330040b45608689619ce";
+					break;
 					case "GAP":
-						assignedToSysId = 	"f3cb011fdb92330040b4560868961923";
-						break;
+					assignedToSysId = 	"f3cb011fdb92330040b4560868961923";
+					break;
 					case "GAPBH":
-						assignedToSysId = 	"a9db011fdb92330040b456086896195e";
-						break;
+					assignedToSysId = 	"a9db011fdb92330040b456086896195e";
+					break;
 					case "GCS":
-						assignedToSysId = 	"0aeb49dbdb92330040b45608689619cd";
-						break;
+					assignedToSysId = 	"0aeb49dbdb92330040b45608689619cd";
+					break;
 					case "HBT":
-						assignedToSysId = 	"65fb811fdb92330040b4560868961947";
-						break;
+					assignedToSysId = 	"65fb811fdb92330040b4560868961947";
+					break;
 					case "LACC":
-						assignedToSysId = 	"e3fbc11fdb92330040b4560868961972";
-						break;
+					assignedToSysId = 	"e3fbc11fdb92330040b4560868961972";
+					break;
 					case "NDFY":
-						assignedToSysId = 	"a10c811fdb92330040b4560868961939";
-						break;
+					assignedToSysId = 	"a10c811fdb92330040b4560868961939";
+					break;
 					case "NEGB":
-						assignedToSysId = 	"5c1c011fdb92330040b45608689619fc";
-						break;
+					assignedToSysId = 	"5c1c011fdb92330040b45608689619fc";
+					break;
 					case "NEGB_ELA":
-						assignedToSysId = 	"7a1c011fdb92330040b456086896197d";
-						break;
+					assignedToSysId = 	"7a1c011fdb92330040b456086896197d";
+					break;
 					case "OCB":
-						assignedToSysId = 	"e22cc11fdb92330040b45608689619c9";
-						break;
+					assignedToSysId = 	"e22cc11fdb92330040b45608689619c9";
+					break;
 					case "PGS":
-						assignedToSysId = 	"d93c811fdb92330040b456086896193c";
-						break;
+					assignedToSysId = 	"d93c811fdb92330040b456086896193c";
+					break;
 					case "SGB":
-						assignedToSysId = 	"273ccddbdb92330040b4560868961994";
-						break;
+					assignedToSysId = 	"273ccddbdb92330040b4560868961994";
+					break;
 					case "SLABT":
-						assignedToSysId = 	"cabcc11fdb92330040b45608689619d0";
-						break;
+					assignedToSysId = 	"cabcc11fdb92330040b45608689619d0";
+					break;
 					case "SVGB":
-						assignedToSysId = 	"adcc891fdb92330040b456086896190b";
-						break;
+					assignedToSysId = 	"adcc891fdb92330040b456086896190b";
+					break;
 					case "WVA":
-						assignedToSysId = 	"00dcc51fdb92330040b4560868961926";
-						break;
+					assignedToSysId = 	"00dcc51fdb92330040b4560868961926";
+					break;
 				}
 				
 				gr.assigned_to_custom = assignedToSysId;
@@ -553,6 +560,9 @@ try{
 				// Graffiti removal array
 				var graffitiArrayLength =  responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval.length;
 				
+				// Array for graffiti on list
+				var graffitiOnArray = [];
+				
 				for(var j = 0; j < graffitiArrayLength; j++){
 					
 					var graffitiOn =			responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].GraffitiOn;
@@ -569,127 +579,127 @@ try{
 					// Graffiti on checkboxes
 					switch (graffitiOn){
 						case "Alley-Door(s)":
-						gr.u_boolean_31 = true;
+						graffitiOnArray.push("ced775abdb52330040b4560868961923");
 						break;
 						case "Alley-Garage":
-						gr.u_boolean_32 = true;
+						graffitiOnArray.push("06e7f1abdb52330040b45608689619d5");
 						break;
 						case "Alley-Wall(s)":
-						gr.u_boolean_33 = true;
+						graffitiOnArray.push("83e735abdb52330040b4560868961916");
 						break;
 						case "Barricade":
-						gr.u_boolean_34 = true;
+						graffitiOnArray.push("d4f7f1abdb52330040b45608689619ee");
 						break;
 						case "Brick Wall":
-						gr.u_boolean_35 = true;
+						graffitiOnArray.push("1908b16bdb52330040b45608689619e7");
 						break;
 						case "Bridge":
-						gr.u_boolean_36 = true;
+						graffitiOnArray.push("6a0831abdb52330040b45608689619e9");
 						break;
 						case "Building":
-						gr.u_boolean_37 = true;
+						graffitiOnArray.push("1f08b5abdb52330040b4560868961918");
 						break;
 						case "Concrete Block Wall":
-						gr.u_boolean_38 = true;
+						graffitiOnArray.push("4c3879abdb52330040b4560868961936");
 						break;
 						case "Curb(s)":
-						gr.u_boolean_39 = true;
+						graffitiOnArray.push("a83839abdb52330040b4560868961947");
 						break;
 						case "Door(s)":
-						gr.u_boolean_40 = true;
+						graffitiOnArray.push("bd3875abdb52330040b4560868961940");
 						break;
 						case "Driveway":
-						gr.u_boolean_41 = true;
+						graffitiOnArray.push("d33879abdb52330040b456086896193a");
 						break;
 						case "Fence":
-						gr.u_boolean_42 = true;
+						graffitiOnArray.push("bc4879abdb52330040b45608689619cd");
 						break;
 						case "Fire Hydrant":
-						gr.u_boolean_43 = true;
+						graffitiOnArray.push("8e4879abdb52330040b45608689619f1");
 						break;
 						case "Garage":
-						gr.u_boolean_44 = true;
+						graffitiOnArray.push("ae48b9abdb52330040b4560868961961");
 						break;
 						case "Granite Pole(s)":
-						gr.u_boolean_45 = true;
+						graffitiOnArray.push("9958f9abdb52330040b4560868961941");
 						break;
 						case "House-Building":
-						gr.u_boolean_46 = true;
+						graffitiOnArray.push("8b5839abdb52330040b45608689619f3");
 						break;
 						case "Mailbox":
-						gr.u_boolean_47 = true;
+						graffitiOnArray.push("735839abdb52330040b4560868961920");
 						break;
 						case "Metal Pole(s)":
-						gr.u_boolean_48 = true;
+						graffitiOnArray.push("566839abdb52330040b45608689619e9");
 						break;
 						case "Overpass":
-						gr.u_boolean_49 = true;
+						graffitiOnArray.push("0e783dabdb52330040b4560868961952");
 						break;
 						case "Parking Lot":
-						gr.u_boolean_50 = true;
+						graffitiOnArray.push("df88f5abdb52330040b45608689619a5");
 						break;
 						case "Pedestrian Furniture":
-						gr.u_boolean_51 = true;
+						graffitiOnArray.push("b3883dabdb52330040b45608689619dc");
 						break;
 						case "Pedestrian Tunnel":
-						gr.u_boolean_52 = true;
+						graffitiOnArray.push("659839abdb52330040b45608689619cd");
 						break;
 						case "Red Curb":
-						gr.u_boolean_53 = true;
+						graffitiOnArray.push("fe987dabdb52330040b4560868961958");
 						break;
 						case "Retaining Wall":
-						gr.u_boolean_54 = true;
+						graffitiOnArray.push("3f98f9abdb52330040b456086896196f");
 						break;
 						case "Roll Down Doors":
-						gr.u_boolean_55 = true;
+						graffitiOnArray.push("b0a8fdabdb52330040b456086896196d");
 						break;
 						case "Sidewalk":
-						gr.u_boolean_56 = true;
+						graffitiOnArray.push("9ea83dabdb52330040b45608689619e4");
 						break;
 						case "Soundwalls":
-						gr.u_boolean_57 = true;
+						graffitiOnArray.push("eba87dabdb52330040b4560868961938");
 						break;
 						case "Stairs":
-						gr.u_boolean_58 = true;
+						graffitiOnArray.push("18b8f5abdb52330040b45608689619be");
 						break;
 						case "Stop Sign(s)":
-						gr.u_boolean_59 = true;
+						graffitiOnArray.push("95b83dabdb52330040b456086896195b");
 						break;
 						case "Street Sign(s)":
-						gr.u_boolean_60 = true;
+						graffitiOnArray.push("deb87dabdb52330040b45608689619c0");
 						break;
 						case "Street(s)":
-						gr.u_boolean_61 = true;
+						graffitiOnArray.push("bbb831ebdb52330040b4560868961942");
 						break;
 						case "Stucco Wall(s)":
-						gr.u_boolean_62 = true;
+						graffitiOnArray.push("30c871ebdb52330040b4560868961921");
 						break;
 						case "Telephone Pole(s)":
-						gr.u_boolean_63 = true;
+						graffitiOnArray.push("b9c8fdabdb52330040b456086896193f");
 						break;
 						case "Traffic Control Box":
-						gr.u_boolean_64 = true;
+						graffitiOnArray.push("8bc831ebdb52330040b4560868961990");
 						break;
 						case "Traffic Sign(s)":
-						gr.u_boolean_65 = true;
+						graffitiOnArray.push("88d831ebdb52330040b456086896194e");
 						break;
 						case "Tree(s)":
-						gr.u_boolean_66 = true;
+						graffitiOnArray.push("95d831ebdb52330040b456086896194b");
 						break;
 						case "Underpass":
-						gr.u_boolean_67 = true;
+						graffitiOnArray.push("12d8b1ebdb52330040b456086896193f");
 						break;
 						case "Walkway":
-						gr.u_boolean_68 = true;
+						graffitiOnArray.push("4fd8b1ebdb52330040b45608689619ba");
 						break;
 						case "Wall(s)":
-						gr.u_boolean_69 = true;
+						graffitiOnArray.push("45e871ebdb52330040b45608689619e9");
 						break;
 						case "Windows":
-						gr.u_boolean_70 = true;
+						graffitiOnArray.push("0ba939ebdb52330040b4560868961953");
 						break;
 						case "Other":
-						gr.u_boolean_71 = true;
+						graffitiOnArray.push("5d78f9abdb52330040b4560868961945");
 						gr.graffiti_on = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].ListOfLa311GraffitiRemoval.GraffitiRemoval[j].OtherGraffitiSurface;
 						break;
 					}
@@ -744,6 +754,10 @@ try{
 					
 				}
 				
+				// Setting graffiti on list
+				var graffitiOnConcat = graffitiOnArray.join();
+				gr.graffiti_on_list = graffitiOnConcat;
+				
 				
 				// Update record
 				gr.update();
@@ -763,14 +777,14 @@ catch(ex){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-07 20:04:53</sys_created_on>
         <sys_id>5c9a6c97dbf1330040b4560868961910</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>GetMyLA311SRs</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sysauto_script_5c9a6c97dbf1330040b4560868961910</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-03 15:57:25</sys_updated_on>
+        <sys_updated_on>2019-07-03 20:04:31</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>
