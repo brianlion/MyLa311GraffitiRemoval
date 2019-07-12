@@ -15,7 +15,8 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_328401_mylagraff_removal_request">state=2^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="2"/>
+        <filter_condition table="x_328401_mylagraff_removal_request">reason_codeVALCHANGES^NQresolution_codeVALCHANGES^EQ<item endquery="false" field="reason_code" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="resolution_code" goto="false" newquery="true" operator="VALCHANGES" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
@@ -43,36 +44,60 @@
 		r.setStringParameterNoEscape('WorkersInvolved', current.number_of_workers);
 		r.setStringParameterNoEscape('CommentType', current.comment_type);
 		
+		var work_notes = current.work_notes.getJournalEntry(1);
+		var additional_comments = current.comments.getJournalEntry(1);
+		var regex = new RegExp('\n');
+		var work_notes_substring = work_notes;
+		var additional_comments_substring = additional_comments;
+		
+		var i = work_notes.search(regex);
+		if (i>0)
+			{
+			// Taking everything after the first line break
+			work_notes_substring = work_notes.substring(i+1, work_notes.length);
+			
+		}
+		var j = additional_comments.search(regex);
+		if (j>0)
+			{
+			additional_comments_substring = additional_comments.substring(j+1, additional_comments.length);
+		}
+		
+		// Removing space after substring
+		var externalComment = additional_comments_substring.replace(/^\s+|\s+$/g, '');
+		var internalComment = work_notes_substring.replace(/^\s+|\s+$/g, '');
+		
 		if(current.comment_type == 'External'){
-			r.setStringParameterNoEscape('Comment', current.comment);
+			r.setStringParameterNoEscape('Comment', externalComment);
 		}
 		else {
-			r.setStringParameterNoEscape('Comment', current.internal_comments);
+			r.setStringParameterNoEscape('Comment', internalComment);
 		}
 		
+		// If resolution code changes, send closed date
+		if(current.resolution_code != previous.resolution_code){
+			// Format date to send as parameters in rest message
+			var date = new GlideDate();
+			var dateFormatted = date.getByFormat("MM/dd/yyyy");
+			
+			var time = new GlideDateTime();
+			var localTime = time.getLocalTime();
+			var timeFormatted = localTime.getByFormat("HH:mm:ss");
+			
+			var serviceDate = dateFormatted + " " + timeFormatted;
+			
+			r.setStringParameterNoEscape('ServiceDate', serviceDate);
+		}
 		
-		// Format date to send as parameters in rest message
-		var date = new GlideDate();
-		var dateFormatted = date.getByFormat("MM/dd/yyyy");
-		
-		var time = new GlideDateTime();
-		var localTime = time.getLocalTime();
-		var timeFormatted = localTime.getByFormat("HH:mm:ss");
-		
-		var closedDate = dateFormatted + " " + timeFormatted;
-		
-		r.setStringParameterNoEscape('ClosedDate', closedDate);
 		
 		var response = r.executeAsync();
 		var httpStatus = response.getStatusCode();
 		gs.info("HTTP STATUS CODE: " + httpStatus);
 		
-		gs.info("SR NUMBER: " + current.service_request_number);
+		gs.info("Upserting SR: " + current.service_request_number);
 		gs.info("REASON CODE: " + current.reason_code);
 		gs.info("RESOLUTION CODE: " + current.resolution_code);
 		gs.info("STATE/STATUS: " + current.state.getDisplayValue());
-		gs.info("COMMENT: " + current.comment);
-		gs.info("ClosedDate: " + closedDate);
 	}
 	catch(ex){
 		var message = ex.getMessage();
@@ -86,7 +111,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2460947adb02330040b45608689619f9</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>61</sys_mod_count>
         <sys_name>Trigger Upsert</sys_name>
         <sys_overrides/>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
@@ -94,7 +119,7 @@
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_script_2460947adb02330040b45608689619f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-03 15:37:15</sys_updated_on>
+        <sys_updated_on>2019-07-12 20:10:45</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

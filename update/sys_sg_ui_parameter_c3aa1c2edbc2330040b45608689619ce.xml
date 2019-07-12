@@ -10,7 +10,7 @@
         <input_source>user</input_source>
         <input_style/>
         <input_type>list</input_type>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <multi_select>false</multi_select>
         <name>Reason Code</name>
         <order>400</order>
@@ -23,14 +23,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-17 21:16:02</sys_created_on>
         <sys_id>c3aa1c2edbc2330040b45608689619ce</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Reason Code</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_sg_ui_parameter_c3aa1c2edbc2330040b45608689619ce</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-02 15:38:05</sys_updated_on>
+        <sys_updated_on>2019-07-11 16:48:45</sys_updated_on>
         <table_name>x_328401_mylagraff_removal_request</table_name>
     </sys_sg_ui_parameter>
     <sys_translated_text action="delete_multiple" query="documentkey=c3aa1c2edbc2330040b45608689619ce"/>

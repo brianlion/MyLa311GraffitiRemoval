@@ -10,7 +10,7 @@
         <input_source>user</input_source>
         <input_style>inline</input_style>
         <input_type>list</input_type>
-        <mandatory>true</mandatory>
+        <mandatory>false</mandatory>
         <multi_select>false</multi_select>
         <name>Comment Type</name>
         <order>600</order>
@@ -23,14 +23,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-21 16:23:18</sys_created_on>
         <sys_id>ff3ef3ebdb02330040b456086896190e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Comment Type</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_sg_ui_parameter_ff3ef3ebdb02330040b456086896190e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-02 15:38:25</sys_updated_on>
+        <sys_updated_on>2019-07-11 16:49:05</sys_updated_on>
         <table_name>x_328401_mylagraff_removal_request</table_name>
     </sys_sg_ui_parameter>
     <sys_translated_text action="delete_multiple" query="documentkey=ff3ef3ebdb02330040b456086896190e"/>

@@ -8,54 +8,16 @@
             <label>Open</label>
             <language>en</language>
             <name>x_328401_mylagraff_removal_request</name>
-            <sequence>0</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-05-24 17:42:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>2004c8b2db61330040b456086896194e</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-18 18:20:18</sys_updated_on>
-            <value>1</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Closed</label>
-            <language>en</language>
-            <name>x_328401_mylagraff_removal_request</name>
             <sequence>1</sequence>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2019-05-24 17:42:18</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>6c04c8b2db61330040b456086896194f</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_id>2004c8b2db61330040b456086896194e</sys_id>
+            <sys_mod_count>5</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-18 18:20:27</sys_updated_on>
-            <value>2</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>state</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>Cancelled</label>
-            <language>en</language>
-            <name>x_328401_mylagraff_removal_request</name>
-            <sequence>2</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-05-24 17:42:18</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>2804c8b2db61330040b4560868961951</sys_id>
-            <sys_mod_count>3</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-18 18:20:32</sys_updated_on>
-            <value>3</value>
+            <sys_updated_on>2019-07-11 21:23:10</sys_updated_on>
+            <value>-1</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -65,23 +27,42 @@
             <label>Pending</label>
             <language>en</language>
             <name>x_328401_mylagraff_removal_request</name>
-            <sequence>3</sequence>
+            <sequence>2</sequence>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2019-05-24 17:42:18</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>e004c8b2db61330040b4560868961953</sys_id>
-            <sys_mod_count>3</sys_mod_count>
+            <sys_id>6c04c8b2db61330040b456086896194f</sys_id>
+            <sys_mod_count>8</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-18 18:20:35</sys_updated_on>
-            <value>4</value>
+            <sys_updated_on>2019-07-11 21:23:15</sys_updated_on>
+            <value>-2</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>state</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Forwarded</label>
+            <label>Forward</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-24 17:42:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2804c8b2db61330040b4560868961951</sys_id>
+            <sys_mod_count>7</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-11 21:23:17</sys_updated_on>
+            <value>-3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cancelled</label>
             <language>en</language>
             <name>x_328401_mylagraff_removal_request</name>
             <sequence>4</sequence>
@@ -89,11 +70,49 @@
             <sys_created_on>2019-05-24 17:42:18</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>6c04c8b2db61330040b4560868961954</sys_id>
-            <sys_mod_count>3</sys_mod_count>
+            <sys_id>e004c8b2db61330040b4560868961953</sys_id>
+            <sys_mod_count>10</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-06-18 18:20:40</sys_updated_on>
-            <value>5</value>
+            <sys_updated_on>2019-07-11 21:58:50</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Closed</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>5</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-05-24 17:42:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6c04c8b2db61330040b4560868961954</sys_id>
+            <sys_mod_count>8</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-11 21:58:53</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Referred Out</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <sequence>6</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-07-11 16:14:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>da2c3ec2db62330040b4560868961926</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-07-11 21:58:56</sys_updated_on>
+            <value>7</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>state</element>

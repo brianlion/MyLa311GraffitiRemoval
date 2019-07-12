@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_param_defs">
+    <sys_rest_message_fn_param_defs action="INSERT_OR_UPDATE">
+        <name>apikey</name>
+        <order>100</order>
+        <rest_message_function display_value="PostWorkNotes">74d04922dbe2330040b4560868961994</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_param_defs</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-07-12 20:33:04</sys_created_on>
+        <sys_id>81d04522dbe2330040b4560868961907</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>apikey</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_rest_message_fn_param_defs_81d04522dbe2330040b4560868961907</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-12 20:33:04</sys_updated_on>
+        <value>f9xSqqkPyGgqwGEvyP3WAtbsfPzziqih</value>
+    </sys_rest_message_fn_param_defs>
+</record_update>
