@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_button_instance">
     <sys_sg_button_instance action="INSERT_OR_UPDATE">
         <active>true</active>
-        <button display_value="Close SR">3302a7d6db42330040b456086896194f</button>
+        <button display_value="SR Closeout">3302a7d6db42330040b456086896194f</button>
         <description/>
         <field_name/>
         <label>Close Ticket</label>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_ui_parameter">
     <sys_sg_ui_parameter action="INSERT_OR_UPDATE">
-        <button display_value="Close SR">3302a7d6db42330040b456086896194f</button>
+        <button display_value="SR Closeout">3302a7d6db42330040b456086896194f</button>
         <button_parent_table>x_328401_mylagraff_removal_request</button_parent_table>
         <carried>false</carried>
         <constant/>
