@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="opened_date" label="Opened" language="en" table="x_328401_mylagraff_removal_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>opened_date</element>
+            <help/>
+            <hint/>
+            <label>Opened</label>
+            <language>en</language>
+            <name>x_328401_mylagraff_removal_request</name>
+            <plural>Opened</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-09-03 19:20:58</sys_created_on>
+            <sys_id>a8cca9efdba33300a812f53a299619d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Opened</sys_name>
+            <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+            <sys_update_name>sys_documentation_x_328401_mylagraff_removal_request_opened_date_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-09-03 19:20:58</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

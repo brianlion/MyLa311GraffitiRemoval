@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_parameter">
+    <sys_sg_item_parameter action="INSERT_OR_UPDATE">
+        <default_value/>
+        <name>fsdf</name>
+        <parent>340efa0cdb61330040b4560868961994</parent>
+        <parent_table>sys_sg_data_item</parent_table>
+        <sys_class_name>sys_sg_item_parameter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-27 18:21:53</sys_created_on>
+        <sys_id>c31c51dddb6b3300a812f53a29961998</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>fsdf</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_sg_item_parameter_c31c51dddb6b3300a812f53a29961998</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-27 18:21:53</sys_updated_on>
+        <type>string</type>
+    </sys_sg_item_parameter>
+</record_update>

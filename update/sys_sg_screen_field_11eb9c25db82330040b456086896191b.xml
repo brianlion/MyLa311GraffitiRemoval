@@ -2,21 +2,21 @@
     <sys_sg_screen_field action="INSERT_OR_UPDATE">
         <data_item_field_name>phone_number</data_item_field_name>
         <hidden>false</hidden>
-        <order>140</order>
+        <order>160</order>
         <screen display_value="Details">139f7e8cdb61330040b4560868961948</screen>
         <screen_data_item_table>x_328401_mylagraff_removal_request</screen_data_item_table>
         <sys_class_name>sys_sg_screen_field</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-14 18:45:39</sys_created_on>
         <sys_id>11eb9c25db82330040b456086896191b</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>phone_number</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_sg_screen_field_11eb9c25db82330040b456086896191b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-10 15:32:22</sys_updated_on>
+        <sys_updated_on>2019-07-17 21:36:08</sys_updated_on>
         <type>auto</type>
     </sys_sg_screen_field>
 </record_update>

@@ -8,8 +8,8 @@
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
-        <run_period>1970-01-01 00:02:00</run_period>
-        <run_start>2019-07-11 22:06:00</run_start>
+        <run_period>1970-01-01 00:00:30</run_period>
+        <run_start>2019-08-01 15:00:00</run_start>
         <run_time>1970-01-01 08:00:00</run_time>
         <run_type>periodically</run_type>
         <script><![CDATA[var pageSize = 1;
@@ -29,7 +29,7 @@ try{
 	
 	var updatedTill = dateFormatted + " " + timeFormatted;
 	
-	time.subtract(130000);
+	time.subtract(35000);
 	var subtractedLocalTime = time.getLocalTime();
 	var subtractedTimeFormatted = subtractedLocalTime.getByFormat("HH:mm:ss");
 	
@@ -98,57 +98,62 @@ try{
 					// Set assigned to
 					var assignedTo = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].AssignTo;
 					var assignedToSysId;
-					var assignedToName;
 					switch(assignedTo){
 						case "CCAC":
-						assignedToSysId = 	"44cb011fdb92330040b45608689619ce";
+						assignedToSysId = "321e6984db32330040b456086896190b";
+						break;
+						case "CRCD":
+						assignedToSysId = "d0d9f102db36330040b4560868961957";
 						break;
 						case "GAP":
-						assignedToSysId = 	"f3cb011fdb92330040b4560868961923";
+						assignedToSysId = "077e6d84db32330040b456086896193b";
 						break;
 						case "GAPBH":
-						assignedToSysId = 	"a9db011fdb92330040b456086896195e";
+						assignedToSysId = "7c5e6984db32330040b4560868961958";
 						break;
 						case "GCS":
-						assignedToSysId = 	"0aeb49dbdb92330040b45608689619cd";
+						assignedToSysId = "0bfd6584db32330040b4560868961922";
 						break;
 						case "HBT":
-						assignedToSysId = 	"65fb811fdb92330040b4560868961947";
+						assignedToSysId = "672e6584db32330040b456086896191a";
+						break;
+						case "KYCC":
+						assignedToSysId = "fed97502db36330040b4560868961972";
 						break;
 						case "LACC":
-						assignedToSysId = 	"e3fbc11fdb92330040b4560868961972";
+						assignedToSysId = "c67e6d84db32330040b45608689619d2";
 						break;
 						case "NDFY":
-						assignedToSysId = 	"a10c811fdb92330040b4560868961939";
+						assignedToSysId = "454e2584db32330040b4560868961913";
 						break;
 						case "NEGB":
-						assignedToSysId = 	"5c1c011fdb92330040b45608689619fc";
+						assignedToSysId = "dd2e6984db32330040b45608689619c4";
 						break;
 						case "NEGB_ELA":
-						assignedToSysId = 	"7a1c011fdb92330040b456086896197d";
+						assignedToSysId = "923ea984db32330040b456086896191e";
 						break;
 						case "OCB":
-						assignedToSysId = 	"e22cc11fdb92330040b45608689619c9";
+						assignedToSysId = "8c20fd84db32330040b456086896197e";
 						break;
 						case "PGS":
-						assignedToSysId = 	"d93c811fdb92330040b456086896193c";
+						assignedToSysId = "1c7e2584db32330040b4560868961926";
 						break;
 						case "SGB":
-						assignedToSysId = 	"273ccddbdb92330040b4560868961994";
+						assignedToSysId = "201e6584db32330040b4560868961976";
 						break;
 						case "SLABT":
-						assignedToSysId = 	"cabcc11fdb92330040b45608689619d0";
+						assignedToSysId = "bd6ee984db32330040b456086896197d";
 						break;
 						case "SVGB":
-						assignedToSysId = 	"adcc891fdb92330040b456086896190b";
+						assignedToSysId = "586ea984db32330040b45608689619c1";
 						break;
 						case "WVA":
-						assignedToSysId = 	"00dcc51fdb92330040b4560868961926";
+						assignedToSysId = "e3ede184db32330040b456086896194c";
 						break;
 					}
 					
-					gr.assigned_to_custom = assignedToSysId;
-					gr.ticket_owner = "eb1b85dbdb92330040b45608689619b0";
+					gr.assignment_group = assignedToSysId;
+					//gr.ticket_owner = "eb1b85dbdb92330040b45608689619b0";
 					
 					for(var k = 0; k < serviceRequestNotesArrayLength; k++){
 						
@@ -447,57 +452,62 @@ try{
 					// Set assigned to
 					var assignedTo = responseObj.Response.ListOfServiceRequest.ServiceRequest[i].AssignTo;
 					var assignedToSysId;
-					var assignedToName;
 					switch(assignedTo){
 						case "CCAC":
-						assignedToSysId = 	"44cb011fdb92330040b45608689619ce";
+						assignedToSysId = "321e6984db32330040b456086896190b";
+						break;
+						case "CRCD":
+						assignedToSysId = "d0d9f102db36330040b4560868961957";
 						break;
 						case "GAP":
-						assignedToSysId = 	"f3cb011fdb92330040b4560868961923";
+						assignedToSysId = "077e6d84db32330040b456086896193b";
 						break;
 						case "GAPBH":
-						assignedToSysId = 	"a9db011fdb92330040b456086896195e";
+						assignedToSysId = "7c5e6984db32330040b4560868961958";
 						break;
 						case "GCS":
-						assignedToSysId = 	"0aeb49dbdb92330040b45608689619cd";
+						assignedToSysId = "0bfd6584db32330040b4560868961922";
 						break;
 						case "HBT":
-						assignedToSysId = 	"65fb811fdb92330040b4560868961947";
+						assignedToSysId = "672e6584db32330040b456086896191a";
+						break;
+						case "KYCC":
+						assignedToSysId = "fed97502db36330040b4560868961972";
 						break;
 						case "LACC":
-						assignedToSysId = 	"e3fbc11fdb92330040b4560868961972";
+						assignedToSysId = "c67e6d84db32330040b45608689619d2";
 						break;
 						case "NDFY":
-						assignedToSysId = 	"a10c811fdb92330040b4560868961939";
+						assignedToSysId = "454e2584db32330040b4560868961913";
 						break;
 						case "NEGB":
-						assignedToSysId = 	"5c1c011fdb92330040b45608689619fc";
+						assignedToSysId = "dd2e6984db32330040b45608689619c4";
 						break;
 						case "NEGB_ELA":
-						assignedToSysId = 	"7a1c011fdb92330040b456086896197d";
+						assignedToSysId = "923ea984db32330040b456086896191e";
 						break;
 						case "OCB":
-						assignedToSysId = 	"e22cc11fdb92330040b45608689619c9";
+						assignedToSysId = "8c20fd84db32330040b456086896197e";
 						break;
 						case "PGS":
-						assignedToSysId = 	"d93c811fdb92330040b456086896193c";
+						assignedToSysId = "1c7e2584db32330040b4560868961926";
 						break;
 						case "SGB":
-						assignedToSysId = 	"273ccddbdb92330040b4560868961994";
+						assignedToSysId = "201e6584db32330040b4560868961976";
 						break;
 						case "SLABT":
-						assignedToSysId = 	"cabcc11fdb92330040b45608689619d0";
+						assignedToSysId = "bd6ee984db32330040b456086896197d";
 						break;
 						case "SVGB":
-						assignedToSysId = 	"adcc891fdb92330040b456086896190b";
+						assignedToSysId = "586ea984db32330040b45608689619c1";
 						break;
 						case "WVA":
-						assignedToSysId = 	"00dcc51fdb92330040b4560868961926";
+						assignedToSysId = "e3ede184db32330040b456086896194c";
 						break;
 					}
 					
-					gr.assigned_to_custom = assignedToSysId;
-					gr.ticket_owner = "eb1b85dbdb92330040b45608689619b0";
+					gr.assignment_group = assignedToSysId;
+					//gr.ticket_owner = "eb1b85dbdb92330040b45608689619b0";
 					
 					for(var k = 0; k < serviceRequestNotesArrayLength; k++){
 						
@@ -802,14 +812,14 @@ catch(ex){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-07 20:04:53</sys_created_on>
         <sys_id>5c9a6c97dbf1330040b4560868961910</sys_id>
-        <sys_mod_count>83</sys_mod_count>
+        <sys_mod_count>92</sys_mod_count>
         <sys_name>GetMyLA311SRs</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sysauto_script_5c9a6c97dbf1330040b4560868961910</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-12 17:32:14</sys_updated_on>
+        <sys_updated_on>2019-08-26 22:18:04</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

@@ -3,7 +3,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes/>
+        <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation/>
         <choice>0</choice>
@@ -12,7 +12,7 @@
         <column_label>Ticket Owner</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>OCB</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -27,15 +27,15 @@
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Reference">reference</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
-        <max_length>32</max_length>
+        <max_length>40</max_length>
         <name>x_328401_mylagraff_removal_request</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="x_328401_mylagraff_ticket_owner">x_328401_mylagraff_ticket_owner</reference>
+        <reference/>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -47,16 +47,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2019-07-03 15:23:24</sys_created_on>
-        <sys_id>0cd3616bdb12330040b45608689619ab</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2019-08-26 22:18:42</sys_created_on>
+        <sys_id>4ab809c9db233300a812f53a2996194a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Ticket Owner</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_dictionary_x_328401_mylagraff_removal_request_ticket_owner</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-03 15:23:24</sys_updated_on>
+        <sys_updated_on>2019-08-26 22:18:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

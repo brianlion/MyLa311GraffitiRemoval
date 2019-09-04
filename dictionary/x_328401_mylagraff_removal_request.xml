@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="Removal Request" max_length="40" name="x_328401_mylagraff_removal_request" sizeclass="1" type="collection">
+    <element audit="true" extends="task" label="Removal Request" max_length="40" name="x_328401_mylagraff_removal_request" sizeclass="32" type="collection">
         <element label="Additional Location Information" max_length="250" name="additional_location_information" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Assigned To" max_length="40" name="assigned_to_custom" reference="x_328401_mylagraff_assigned_to" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Cleanup Hours" max_length="40" name="cleanup_hours" type="string">
             <choice>
                 <element inactive_on_update="false" label="0" sequence="0" value="0"/>
@@ -56,6 +55,7 @@
                 <element inactive_on_update="false" label="10" sequence="10" value="10"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" default="0" label="Opened" max_length="40" name="opened_date" type="string"/>
         <element label="Phone Number" max_length="40" name="phone_number" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Reason Code" max_length="40" name="reason_code" type="string">
             <choice>
@@ -87,7 +87,7 @@
         <element label="Service Request Number" max_length="40" name="service_request_number" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Source of Request" max_length="40" name="source_of_request" type="string"/>
         <element label="Square Feet Cleaned" max_length="5" name="square_feet_cleaned" type="integer"/>
-        <element label="Ticket Owner" max_length="32" name="ticket_owner" reference="x_328401_mylagraff_ticket_owner" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" default="OCB" label="Ticket Owner" max_length="40" name="ticket_owner" type="string"/>
         <element label="Chemical Solvent" max_length="40" name="u_boolean_75" type="boolean"/>
         <element label="Sandblast / Waterblast" max_length="40" name="u_boolean_76" type="boolean"/>
         <element label="Paint" max_length="40" name="u_boolean_77" type="boolean"/>
@@ -110,7 +110,6 @@
             </choice>
         </element>
         <element label="New File Attachment" max_length="40" name="u_file_attachment_82" type="file_attachment"/>
-        <element label="Ticket Owner" max_length="32" name="u_reference_1" reference="x_328401_mylagraff_ticket_owner" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Graffiti On" max_length="40" name="u_string_72" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Suggested Removal Method" max_length="40" name="u_string_73" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Work Completion Date" max_length="40" name="work_completion_date" type="string"/>
