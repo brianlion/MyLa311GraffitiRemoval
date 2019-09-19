@@ -35,13 +35,80 @@
 	try {
 		var r = new sn_ws.RESTMessageV2('x_328401_mylagraff.UpsertSR', 'PostSR');
 		r.setStringParameterNoEscape('SRNumber', current.service_request_number);
-		r.setStringParameterNoEscape('UpdatedByUserLogin', "MYLA-BPW3");
+		//r.setStringParameterNoEscape('UpdatedByUserLogin', "MYLA-BPW3");
 		r.setStringParameterNoEscape('ReasonCode', current.reason_code);
 		r.setStringParameterNoEscape('ResolutionCode', current.resolution_code);
 		r.setStringParameterNoEscape('NumberofIncidents', current.number_of_incidents);
 		r.setStringParameterNoEscape('CleanupHours', current.cleanup_hours);
 		r.setStringParameterNoEscape('SquareFeetCleaned', current.square_feet_cleaned);
 		r.setStringParameterNoEscape('WorkersInvolved', current.number_of_workers);
+		
+		var assignmentGroup = current.assignment_group.toString();
+		gs.info("ASSIGNED TO: " + assignmentGroup);
+		// Set the Integration ID by assigned to
+		switch(assignmentGroup){
+			// CCAC
+			case "321e6984db32330040b456086896190b":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "CCACINTEGRATION");
+			break;
+			// CRCD
+			case "d0d9f102db36330040b4560868961957":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "CRCDINTEGRATION");
+			break;
+			// GAP
+			case "077e6d84db32330040b456086896193b":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "GAPINTEGRATION");
+			break;
+			// GAPBH 
+			case "7c5e6984db32330040b4560868961958":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "GAPBHINTEGRATION");
+			gs.info("GAPBH TRIGGERED");
+			break;
+			// GCS
+			case "0bfd6584db32330040b4560868961922":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "GCSINTEGRATION");
+			break;
+			// HBT
+			case "672e6584db32330040b456086896191a":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "HBTINTEGRATION");
+			break;
+			// KYCC
+			case "fed97502db36330040b4560868961972":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "KYCCINTEGRATION");
+			break;
+			// LACC
+			case "c67e6d84db32330040b45608689619d2":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "LACCINTEGRATION");
+			break;
+			// NDFY
+			case "454e2584db32330040b4560868961913":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "NDFYINTEGRATION");
+			break;
+			// NEGB
+			case "dd2e6984db32330040b45608689619c4":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "NEGBINTEGRATION");
+			break;
+			// NEGB_ELA
+			case "923ea984db32330040b456086896191e":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "NEGB_ELAINTEGRATION");
+			break;
+			// PGS
+			case "1c7e2584db32330040b4560868961926":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "PGSINTEGRATION");
+			break;
+			// SGB
+			case "201e6584db32330040b4560868961976":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "SGBINTEGRATION");
+			break;
+			// SVGB
+			case "586ea984db32330040b45608689619c1":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "SVGBINTEGRATION");
+			break;
+			// WVA
+			case "e3ede184db32330040b456086896194c":
+			r.setStringParameterNoEscape('UpdatedByUserLogin', "WVAINTEGRATION");
+			break;
+		}
 		
 		
 		// If resolution code changes, send closed date
@@ -81,7 +148,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2460947adb02330040b45608689619f9</sys_id>
-        <sys_mod_count>62</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name>Trigger Upsert</sys_name>
         <sys_overrides/>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
@@ -89,7 +156,7 @@
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_script_2460947adb02330040b45608689619f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-15 14:47:59</sys_updated_on>
+        <sys_updated_on>2019-09-16 17:06:36</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

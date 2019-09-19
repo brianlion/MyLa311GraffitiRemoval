@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_action_plan">
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Image Upload">78bffe40db333300a812f53a29961936</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"c9d2c704db333300a812f53a299619f8","name":"plan"}}</plan>
+        <snapshot>6d34747bdbf33300a812f53a299619e5</snapshot>
+        <sys_class_name>sys_hub_action_plan</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-09-05 14:53:59</sys_created_on>
+        <sys_id>c9d2c704db333300a812f53a299619f8</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>78bffe40db333300a812f53a29961936</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_hub_action_plan_c9d2c704db333300a812f53a299619f8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-09-16 20:08:07</sys_updated_on>
+    </sys_hub_action_plan>
+</record_update>

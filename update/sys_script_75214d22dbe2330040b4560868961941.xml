@@ -48,6 +48,60 @@
 		var internalComment = work_notes_substring.replace(/^\s+|\s+$/g, '');
 		
 		r.setStringParameterNoEscape('Comment', internalComment);
+		
+		var userName = gs.getUserName();
+		switch(userName){
+			case "admin":
+			r.setStringParameterNoEscape('CreatedByUser', "MYLA-BPW3");
+			break;	
+			case "CCACcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "CCACINTEGRATION");
+			break;
+			case "CRCDcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "CRCDINTEGRATION");
+			break;
+			case "GAPcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "GAPINTEGRATION");
+			break;
+			case "GAPBHcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "GAPBHINTEGRATION");
+			break;
+			case "GCScontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "GCSINTEGRATION");
+			break;
+			case "HBTcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "HBTINTEGRATION");
+			break;
+			case "KYCCcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "KYCCINTEGRATION");
+			break;
+			case "LACCcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "LACCINTEGRATION");
+			break;
+			case "NDFYcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "NDFYINTEGRATION");
+			break;
+			case "NEGBcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "NEGBINTEGRATION");
+			break;
+			case "NEGB_ELAcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "NEGB_ELAINTEGRATION");
+			break;
+			case "PGScontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "PGSINTEGRATION");
+			break;
+			case "SGBcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "SGBINTEGRATION");
+			break;
+			case "SVGBcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "SVGBINTEGRATION");
+			break;
+			case "WVAcontractor":
+			r.setStringParameterNoEscape('CreatedByUser', "WVAINTEGRATION");
+			break;
+		}
+		
+		
 		var response = r.executeAsync();
 	}
 	catch(ex){
@@ -62,7 +116,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>75214d22dbe2330040b4560868961941</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Trigger Upsert Work Notes</sys_name>
         <sys_overrides/>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
@@ -70,7 +124,7 @@
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sys_script_75214d22dbe2330040b4560868961941</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-07-12 20:37:25</sys_updated_on>
+        <sys_updated_on>2019-09-16 19:42:48</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

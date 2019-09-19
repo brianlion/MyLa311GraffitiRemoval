@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>image_upload_flow</internal_name>
+        <label_cache>[{"name":"9484f19c-0464-4f49-abbb-af8ec9145272.Record.integration_id","label":"1➛Removal Request Record➛Integration ID","reference":"","reference_display":"Integration ID","type":"string","base_type":"string","parent_table_name":"x_328401_mylagraff_removal_request","column_name":"integration_id"},{"name":"Created_1.current.sys_id","label":"Trigger➛Attachment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_attachment","column_name":"sys_id"},{"name":"9484f19c-0464-4f49-abbb-af8ec9145272.Record","label":"1➛Removal Request Record","reference":"x_328401_mylagraff_removal_request","reference_display":"Removal Request","type":"reference","base_type":"reference"},{"name":"9484f19c-0464-4f49-abbb-af8ec9145272.Table","label":"1➛Removal Request Table","reference":"x_328401_mylagraff_removal_request","reference_display":"Removal Request","type":"table_name","base_type":"table_name"},{"name":"Created_1.current.table_sys_id","label":"Trigger➛Attachment Record➛Table sys ID","reference":"","reference_display":"Table sys ID","type":"char","base_type":"char","parent_table_name":"sys_attachment","column_name":"table_sys_id"},{"name":"a306567d-2a0f-4296-940e-82802b7bebe0.status","label":"2➛Response","reference_display":"Response","type":"string","base_type":"string"},{"name":"9484f19c-0464-4f49-abbb-af8ec9145272.Record.service_request_number","label":"1➛Removal Request Record➛Service Request Number","reference":"","reference_display":"Service Request Number","type":"string","base_type":"string","parent_table_name":"x_328401_mylagraff_removal_request","column_name":"service_request_number"}]</label_cache>
+        <latest_snapshot>ed7630fbdbf33300a812f53a2996191e</latest_snapshot>
+        <master_snapshot>8f9c83c8db333300a812f53a2996197c</master_snapshot>
+        <name>Image Upload Flow</name>
+        <outputs/>
+        <remote_trigger_id>539c83c8db333300a812f53a299619cf</remote_trigger_id>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-09-05 14:55:53</sys_created_on>
+        <sys_id>cd430b04db333300a812f53a2996197f</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Image Upload Flow</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sys_hub_flow_cd430b04db333300a812f53a2996197f</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-09-16 20:17:55</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=cd430b04db333300a812f53a2996197f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cd430b04db333300a812f53a2996197f"/>
+</record_update>

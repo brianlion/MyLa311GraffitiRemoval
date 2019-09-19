@@ -3,47 +3,47 @@
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>38cc2defdba33300a812f53a2996193c</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>5ea4f87bdbf33300a812f53a299619f3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <text>Graffiti On</text>
             <type display_value="Section Separator">443e806c0fd30000b12e6903cfe01281</type>
         </sys_ui_annotation>
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>3ccc2defdba33300a812f53a2996193c</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>96a4f87bdbf33300a812f53a299619f4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <text>Suggested Removal Method</text>
             <type display_value="Section Separator">443e806c0fd30000b12e6903cfe01281</type>
         </sys_ui_annotation>
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>30cc2defdba33300a812f53a2996193d</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>9aa4f87bdbf33300a812f53a299619f4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <text>Special Cases</text>
             <type display_value="Section Separator">443e806c0fd30000b12e6903cfe01281</type>
         </sys_ui_annotation>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>38cc2defdba33300a812f53a2996193c</element>
+            <element>5ea4f87bdbf33300a812f53a299619f3</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>f0cc2defdba33300a812f53a2996193d</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>5ea4f87bdbf33300a812f53a299619f4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>
@@ -51,13 +51,13 @@
             <element>graffiti_on_list</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>74cc2defdba33300a812f53a2996193d</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>dea4f87bdbf33300a812f53a299619f4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -65,27 +65,27 @@
             <element>graffiti_on</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>f4cc2defdba33300a812f53a2996193d</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>52a4f87bdbf33300a812f53a299619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>3ccc2defdba33300a812f53a2996193c</element>
+            <element>96a4f87bdbf33300a812f53a299619f4</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>78cc2defdba33300a812f53a2996193d</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>d2a4f87bdbf33300a812f53a299619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>
@@ -93,13 +93,13 @@
             <element>u_boolean_75</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>f8cc2defdba33300a812f53a2996193d</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>56a4f87bdbf33300a812f53a299619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -107,13 +107,13 @@
             <element>u_boolean_78</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>7ccc2defdba33300a812f53a2996193d</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>d6a4f87bdbf33300a812f53a299619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -121,13 +121,13 @@
             <element>u_boolean_77</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>fccc2defdba33300a812f53a2996193d</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>5aa4f87bdbf33300a812f53a299619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -135,13 +135,13 @@
             <element>color</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>70cc2defdba33300a812f53a2996193e</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>daa4f87bdbf33300a812f53a299619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -149,27 +149,27 @@
             <element>u_boolean_76</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>f0cc2defdba33300a812f53a2996193e</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>5ea4f87bdbf33300a812f53a299619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>30cc2defdba33300a812f53a2996193d</element>
+            <element>9aa4f87bdbf33300a812f53a299619f4</element>
             <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>74cc2defdba33300a812f53a2996193e</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>dea4f87bdbf33300a812f53a299619f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>
@@ -177,13 +177,13 @@
             <element>u_boolean_79</element>
             <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>f4cc2defdba33300a812f53a2996193e</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>52a4f87bdbf33300a812f53a299619f6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -191,13 +191,13 @@
             <element>u_boolean_80</element>
             <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>78cc2defdba33300a812f53a2996193e</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>d2a4f87bdbf33300a812f53a299619f6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -205,13 +205,13 @@
             <element>.split</element>
             <position>12</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2019-09-03 19:20:59</sys_created_on>
-            <sys_id>f8cc2defdba33300a812f53a2996193e</sys_id>
+            <sys_created_on>2019-09-16 20:10:03</sys_created_on>
+            <sys_id>56a4f87bdbf33300a812f53a299619f6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Graffiti Details" display_value="Graffiti Details" name="x_328401_mylagraff_removal_request" sys_domain="global" view="Default view">993badeddb51330040b45608689619e2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2019-09-03 19:20:59</sys_updated_on>
+            <sys_updated_on>2019-09-16 20:10:03</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>

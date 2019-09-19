@@ -101,54 +101,71 @@ try{
 					switch(assignedTo){
 						case "CCAC":
 						assignedToSysId = "321e6984db32330040b456086896190b";
+						gr.integration_id = "CCACINTEGRATION";
 						break;
 						case "CRCD":
 						assignedToSysId = "d0d9f102db36330040b4560868961957";
+						gr.integration_id = "CRCDINTEGRATION";
 						break;
 						case "GAP":
 						assignedToSysId = "077e6d84db32330040b456086896193b";
+						gr.integration_id = "GAPINTEGRATION";
 						break;
 						case "GAPBH":
 						assignedToSysId = "7c5e6984db32330040b4560868961958";
+						gr.integration_id = "GAPBHINTEGRATION";
 						break;
 						case "GCS":
 						assignedToSysId = "0bfd6584db32330040b4560868961922";
+						gr.integration_id = "GCSINTEGRATION";
 						break;
 						case "HBT":
 						assignedToSysId = "672e6584db32330040b456086896191a";
+						gr.integration_id = "HBTINTEGRATION";
 						break;
 						case "KYCC":
 						assignedToSysId = "fed97502db36330040b4560868961972";
+						gr.integration_id = "KYCCINTEGRATION";
 						break;
 						case "LACC":
 						assignedToSysId = "c67e6d84db32330040b45608689619d2";
+						gr.integration_id = "LACCINTEGRATION";
 						break;
 						case "NDFY":
 						assignedToSysId = "454e2584db32330040b4560868961913";
+						gr.integration_id = "NDFYINTEGRATION";
 						break;
 						case "NEGB":
 						assignedToSysId = "dd2e6984db32330040b45608689619c4";
+						gr.integration_id = "NEGBINTEGRATION";
 						break;
 						case "NEGB_ELA":
 						assignedToSysId = "923ea984db32330040b456086896191e";
+						gr.integration_id = "NEGB_ELAINTEGRATION";
 						break;
 						case "OCB":
 						assignedToSysId = "8c20fd84db32330040b456086896197e";
+						gr.integration_id = "admin";
 						break;
 						case "PGS":
 						assignedToSysId = "1c7e2584db32330040b4560868961926";
+						gr.integration_id = "PGSINTEGRATION";
 						break;
 						case "SGB":
 						assignedToSysId = "201e6584db32330040b4560868961976";
+						gr.integration_id = "SGBINTEGRATION";
 						break;
+						/* The group was removed?
 						case "SLABT":
 						assignedToSysId = "bd6ee984db32330040b456086896197d";
-						break;
+						break; */
 						case "SVGB":
 						assignedToSysId = "586ea984db32330040b45608689619c1";
+						gr.integration_id = "SVGBINTEGRATION";
 						break;
 						case "WVA":
 						assignedToSysId = "e3ede184db32330040b456086896194c";
+						gr.integration_id = "WVAINTEGRATION";
 						break;
 					}
 					
@@ -455,54 +472,71 @@ try{
 					switch(assignedTo){
 						case "CCAC":
 						assignedToSysId = "321e6984db32330040b456086896190b";
+						gr.integration_id = "CCACINTEGRATION";
 						break;
 						case "CRCD":
 						assignedToSysId = "d0d9f102db36330040b4560868961957";
+						gr.integration_id = "CRCDINTEGRATION";
 						break;
 						case "GAP":
 						assignedToSysId = "077e6d84db32330040b456086896193b";
+						gr.integration_id = "GAPINTEGRATION";
 						break;
 						case "GAPBH":
 						assignedToSysId = "7c5e6984db32330040b4560868961958";
+						gr.integration_id = "GAPBHINTEGRATION";
 						break;
 						case "GCS":
 						assignedToSysId = "0bfd6584db32330040b4560868961922";
+						gr.integration_id = "GCSINTEGRATION";
 						break;
 						case "HBT":
 						assignedToSysId = "672e6584db32330040b456086896191a";
+						gr.integration_id = "HBTINTEGRATION";
 						break;
 						case "KYCC":
 						assignedToSysId = "fed97502db36330040b4560868961972";
+						gr.integration_id = "KYCCINTEGRATION";
 						break;
 						case "LACC":
 						assignedToSysId = "c67e6d84db32330040b45608689619d2";
+						gr.integration_id = "LACCINTEGRATION";
 						break;
 						case "NDFY":
 						assignedToSysId = "454e2584db32330040b4560868961913";
+						gr.integration_id = "NDFYINTEGRATION";
 						break;
 						case "NEGB":
 						assignedToSysId = "dd2e6984db32330040b45608689619c4";
+						gr.integration_id = "NEGBINTEGRATION";
 						break;
 						case "NEGB_ELA":
 						assignedToSysId = "923ea984db32330040b456086896191e";
+						gr.integration_id = "NEGB_ELAINTEGRATION";
 						break;
 						case "OCB":
 						assignedToSysId = "8c20fd84db32330040b456086896197e";
+						gr.integration_id = "admin";
 						break;
 						case "PGS":
 						assignedToSysId = "1c7e2584db32330040b4560868961926";
+						gr.integration_id = "PGSINTEGRATION";
 						break;
 						case "SGB":
 						assignedToSysId = "201e6584db32330040b4560868961976";
+						gr.integration_id = "SGBINTEGRATION";
 						break;
+						/* The group was removed?
 						case "SLABT":
 						assignedToSysId = "bd6ee984db32330040b456086896197d";
-						break;
+						break; */
 						case "SVGB":
 						assignedToSysId = "586ea984db32330040b45608689619c1";
+						gr.integration_id = "SVGBINTEGRATION";
 						break;
 						case "WVA":
 						assignedToSysId = "e3ede184db32330040b456086896194c";
+						gr.integration_id = "WVAINTEGRATION";
 						break;
 					}
 					
@@ -812,14 +846,14 @@ catch(ex){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-06-07 20:04:53</sys_created_on>
         <sys_id>5c9a6c97dbf1330040b4560868961910</sys_id>
-        <sys_mod_count>92</sys_mod_count>
+        <sys_mod_count>94</sys_mod_count>
         <sys_name>GetMyLA311SRs</sys_name>
         <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
         <sys_policy/>
         <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
         <sys_update_name>sysauto_script_5c9a6c97dbf1330040b4560868961910</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-08-26 22:18:04</sys_updated_on>
+        <sys_updated_on>2019-09-16 20:14:32</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Set opened days</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-02 00:00:00</run_period>
+        <run_start>2019-09-12 07:00:00</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[var openedDateStr;
+
+var gr = new GlideRecord('x_328401_mylagraff_removal_request');
+gr.addActiveQuery();
+gr.query();
+
+while(gr.next()){
+	
+	var numberOfDays = gr.number_of_days;
+	gs.info("NUMBER OF DAYS: " + numberOfDays);
+	
+	if (numberOfDays < 31){
+		numberOfDays += 1;
+		gs.info("NUMBER AFTER ADDING ONE DAY: " + numberOfDays);
+	}
+	
+	
+	if (numberOfDays == 1){
+		openedDateStr = "1 Day ago";
+	}
+	else if (numberOfDays == 2){
+		openedDateStr = "2 Days ago";
+	}
+	else if (numberOfDays == 3){
+		openedDateStr = "3 Days ago";
+	}
+	else if (numberOfDays == 4){
+		openedDateStr = "4 Days ago";
+	}
+	else if (numberOfDays == 5){
+		openedDateStr = "5 Days ago";
+	}
+	else if (numberOfDays == 6){
+		openedDateStr = "6 Days ago";
+	}
+	else if (numberOfDays >= 7 && numberOfDays <= 13){
+		openedDateStr = "1 Week ago";
+	}
+	else if (numberOfDays >= 14 && numberOfDays <= 20){
+		openedDateStr = "2 Weeks ago";
+	}
+	else if (numberOfDays >= 21 && numberOfDays <= 29){
+		openedDateStr = "3 Weeks ago";
+	}
+	else if (numberOfDays >= 30){
+		openedDateStr = "Over a month ago";
+	}
+	
+	gs.info("Opened Day String: " + openedDateStr);
+	gr.opened_date = openedDateStr;
+	gr.number_of_days = numberOfDays;
+	gr.update();
+}
+
+gs.info("Updated the records opened days");]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-09-11 20:55:38</sys_created_on>
+        <sys_id>eb4dd2c2db733300a812f53a299619c3</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Set opened days</sys_name>
+        <sys_package display_value="MyLAGraffiti" source="x_328401_mylagraff">51d1c5a5db11330040b45608689619b1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="MyLAGraffiti">51d1c5a5db11330040b45608689619b1</sys_scope>
+        <sys_update_name>sysauto_script_eb4dd2c2db733300a812f53a299619c3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-09-11 22:13:06</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
