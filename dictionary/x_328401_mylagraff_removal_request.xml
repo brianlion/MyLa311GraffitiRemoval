@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="Removal Request" max_length="40" name="x_328401_mylagraff_removal_request" sizeclass="26" type="collection">
+    <element audit="true" extends="task" label="Removal Request" max_length="40" name="x_328401_mylagraff_removal_request" sizeclass="36" type="collection">
         <element label="Additional Location Information" max_length="250" name="additional_location_information" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Cleanup Hours" max_length="40" name="cleanup_hours" type="string">
             <choice>
